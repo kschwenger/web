@@ -8,7 +8,7 @@ import json
 print("""
 
 Content-type: text/html\n\n
-<html> 
+<html>
 Place Ships <br>
 <form action="/cgi-bin/web.py" method="POST">
   <input type="checkbox" name="option" value="A1">
