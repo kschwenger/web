@@ -1,8 +1,9 @@
 #!/usr/bin/python37all
 
 import cgi
+import cgitb # see next line
+cgitb.enable() # exception handler, displays uncaught errors
 import json
-
 
 print("""
 
