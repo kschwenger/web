@@ -3,7 +3,6 @@
 import cgi
 import json
 
-Content-type: text/html\n\n
 
 print("""
 
@@ -65,35 +64,35 @@ Place Ships <br>
   <input type="checkbox" name="option" value="E7">
   <input type="checkbox" name="option" value="E8"> 
   <br>
-    <input type="checkbox" name="option" value="F1">
-    <input type="checkbox" name="option" value="F2"> 
-    <input type="checkbox" name="option" value="F3">
-    <input type="checkbox" name="option" value="F4">
-    <input type="checkbox" name="option" value="F5">
-    <input type="checkbox" name="option" value="F6">
-    <input type="checkbox" name="option" value="F7">
-    <input type="checkbox" name="option" value="F8"> 
-    <br>
-    <input type="checkbox" name="option" value="G1">
-    <input type="checkbox" name="option" value="G2"> 
-    <input type="checkbox" name="option" value="G3">
-    <input type="checkbox" name="option" value="G4">
-    <input type="checkbox" name="option" value="G5">
-    <input type="checkbox" name="option" value="G6">
-    <input type="checkbox" name="option" value="G7">
-    <input type="checkbox" name="option" value="G8"> 
-    <br>
-    <input type="checkbox" name="option" value="H1">
-    <input type="checkbox" name="option" value="H2"> 
-    <input type="checkbox" name="option" value="H3">
-    <input type="checkbox" name="option" value="H4">
-    <input type="checkbox" name="option" value="H5">
-    <input type="checkbox" name="option" value="H6">
-    <input type="checkbox" name="option" value="H7">
-    <input type="checkbox" name="option" value="H8">  
-    <br>
-    <input type="submit" value="Submit">
+  <input type="checkbox" name="option" value="F1">
+  <input type="checkbox" name="option" value="F2"> 
+  <input type="checkbox" name="option" value="F3">
+  <input type="checkbox" name="option" value="F4">
+  <input type="checkbox" name="option" value="F5">
+  <input type="checkbox" name="option" value="F6">
+  <input type="checkbox" name="option" value="F7">
+  <input type="checkbox" name="option" value="F8"> 
+  <br>
+  <input type="checkbox" name="option" value="G1">
+  <input type="checkbox" name="option" value="G2"> 
+  <input type="checkbox" name="option" value="G3">
+  <input type="checkbox" name="option" value="G4">
+  <input type="checkbox" name="option" value="G5">
+  <input type="checkbox" name="option" value="G6">
+  <input type="checkbox" name="option" value="G7">
+  <input type="checkbox" name="option" value="G8"> 
+  <br>
+  <input type="checkbox" name="option" value="H1">
+  <input type="checkbox" name="option" value="H2"> 
+  <input type="checkbox" name="option" value="H3">
+  <input type="checkbox" name="option" value="H4">
+  <input type="checkbox" name="option" value="H5">
+  <input type="checkbox" name="option" value="H6">
+  <input type="checkbox" name="option" value="H7">
+  <input type="checkbox" name="option" value="H8">  
+  <br>
+  <input type="submit" value="Submit">
   </form>
   </html>
   
-"""")
+""")
