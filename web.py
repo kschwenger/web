@@ -3,9 +3,11 @@
 import cgi
 import json
 
-print('Content-type: text/html\n\n')
+Content-type: text/html\n\n
 
 print("""
+
+Content-type: text/html\n\n
 <html> 
 Place Ships <br>
 <form action="/cgi-bin/web.py" method="POST">
@@ -93,4 +95,5 @@ Place Ships <br>
     <input type="submit" value="Submit">
   </form>
   </html>
+  
 """")
