@@ -23,6 +23,12 @@ def checking(coord): # check each coord to see if already picked, display as che
       print('<input type="checkbox" name="option" value="%s" checked>' % coord)
     else:
       print('<input type="checkbox" name="option" value="%s">' % coord)
+  elif isinstance(Coordinates, str):
+    count += 1
+    if Coordinates == coord:
+      print('<input type="checkbox" name="option" value="%s" checked>' % coord)
+    else:
+      print('<input type="checkbox" name="option" value="%s">' % coord)
   else:
     print('<input type="checkbox" name="option" value="%s">' % coord)
   if count >= 8: 
@@ -34,7 +40,7 @@ def checking(coord): # check each coord to see if already picked, display as che
 print('Content-type: text/html\n\n')
 print('<html>')
 
-# make sure something is selcted, print the coordinates list 
+# make sure something is selected, print the coordinates list (or singular coordinate)
 if isinstance(Coordinates, list):
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
