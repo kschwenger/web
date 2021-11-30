@@ -9,12 +9,17 @@ from urllib.parse import urlencode # use to structure a GET string
 
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
-Coordinate = dataFromhtml.getvalue('option')
+Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 
 # html code
 print('Content-type: text/html\n\n')
 print('<html>')
-print('Previous Selections: ' + Coordinate[1] + '<br>')
+
+print('Previous Selections: ')
+for i in range(len(Coordinates)):
+  print(Coordinates[i] + ', ')
+
+print('<br>')
 print('Place Ships <br>')
 print('<form action="/cgi-bin/web.py" method="POST">')
 print('<input type="checkbox" name="option" value="A1">')
