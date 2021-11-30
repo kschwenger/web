@@ -4,9 +4,17 @@ import cgi
 import cgitb # see next line
 cgitb.enable() # exception handler, displays uncaught errors
 import json
+from urllib.request import urlopen # use to send/receive data
+from urllib.parse import urlencode # use to structure a GET string
 
+# get data from html form
+dataFromhtml = cgi.FieldStorage()
+Coordinate = dataFromhtml.getvalue('option')
+
+# html code
 print('Content-type: text/html\n\n')
 print('<html>')
+print('Previous Selections: ' + Coordinate)
 print('Place Ships <br>')
 print('<form action="/cgi-bin/web.py" method="POST">')
 print('<input type="checkbox" name="option" value="A1">')
