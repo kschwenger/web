@@ -14,7 +14,7 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 def checking(coord):
   if isinstance(Coordinates, list):
     if Coordinates.count(coord) > 0:
-      print('<input type="checkbox" name="option" value=coord checked>')
+      print('<input type="checkbox" name="option" value=%s checked>' %coord)
     else:
       print('<input type="checkbox" name="option" value=coord>')
   else:
