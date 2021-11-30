@@ -15,9 +15,9 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 print('Content-type: text/html\n\n')
 print('<html>')
 
-print('Previous Selections: ')
-for i in range(len(Coordinates)):
-  print(Coordinates[i] + ', ')
+print('Previous Selections: ' + Coordinates[0])
+for i in range(len(Coordinates)-1):
+  print(Coordinates[i+1] + ', ')
 
 print('<br>')
 print('Place Ships <br>')
@@ -94,6 +94,8 @@ print('<input type="checkbox" name="option" value="H6">')
 print('<input type="checkbox" name="option" value="H7">')
 print('<input type="checkbox" name="option" value="H8">')
 print('<br>')
+
 print('<input type="submit" value="Submit">')
+
 print('</form>')
 print('</html>')
