@@ -29,6 +29,7 @@ def checking(coord): # check each coord to see if already picked, display as che
       print('<input type="checkbox" name="option" value="%s">' % coord)
   else:
     print('<input type="checkbox" name="option" value="%s">' % coord)
+  
   count += 1
   if count >= 8: 
     print('<br>')
@@ -94,9 +95,13 @@ for elem in AllCoords:
   if isinstance(Coordinates, list):
     if Coordinates.count(elem) > 0:
       print('<div class="grid-item">X</div>')
+    else:
+    print('<div class="grid-item"> </div>')
   elif isinstance(Coordinates, str):
     if Coordinates == elem:
       print('<div class="grid-item">X</div>')
+    else:
+    print('<div class="grid-item"> </div>')
   else:
     print('<div class="grid-item"> </div>')
 
