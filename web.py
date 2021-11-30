@@ -15,13 +15,13 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 print('Content-type: text/html\n\n')
 print('<html>')
 
-if len(Coordinates) > 0:
-  print('Previous Selections: ')
-  for i in range(len(Coordinates)):
-  print('  ' + Coordinates[i])
+#if len(Coordinates) > 0:
+print('Previous Selections: ')
+for i in range(len(Coordinates)):
+print('  ' + Coordinates[i])
 
-if len(Coordinates) < 1:
-  print('No selection, select again')
+#if len(Coordinates) < 1:
+  #print('No selection, select again')
 
 print('<br>')
 print('Place Ships <br>')
