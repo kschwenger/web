@@ -27,8 +27,13 @@ else:
 print('<br>')
 print('Place Ships <br>')
 print('<form action="/cgi-bin/web.py" method="POST">')
-print('<input type="checkbox" name="option" value="A1" checked>')
-print('<input type="checkbox" name="option" value="A2">')
+if Coordinates.count('A1') > 0:
+  print('<input type="checkbox" name="option" value="A1"> checked')
+else:
+  print('<input type="checkbox" name="option" value="A1">')
+
+
+print('<div class="grid-item"> </div>')print('<input type="checkbox" name="option" value="A2">')
 print('<input type="checkbox" name="option" value="A3">')
 print('<input type="checkbox" name="option" value="A4">')
 print('<input type="checkbox" name="option" value="A5">')
