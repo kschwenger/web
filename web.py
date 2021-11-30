@@ -17,7 +17,7 @@ print('<html>')
 
 print('Previous Selections: ' + Coordinates[0])
 for i in range(len(Coordinates)-1):
-  print(', ' + Coordinates[i+1])
+  print(',' + Coordinates[i+1])
 
 print('<br>')
 print('Place Ships <br>')
