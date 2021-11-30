@@ -14,7 +14,7 @@ Coordinate = dataFromhtml.getvalue('option')
 # html code
 print('Content-type: text/html\n\n')
 print('<html>')
-print('Previous Selections: ' + option + '<br>')
+print('Previous Selections: ' + Coordinate + '<br>')
 print('Place Ships <br>')
 print('<form action="/cgi-bin/web.py" method="POST">')
 print('<input type="checkbox" name="option" value="A1">')
