@@ -19,9 +19,9 @@ def checking(coord):
     if Coordinates.count(coord) > 0:
       print('<input type="checkbox" name="option" value="%s" checked>' % coord)
     else:
-      print('<input type="checkbox" name="option" value=coord>')
+      print('<input type="checkbox" name="option" value="%s">' % coord)
   else:
-    print('<input type="checkbox" name="option" value=coord>')
+    print('<input type="checkbox" name="option" value="%s">' % coord)
   if count >= 8: 
     print('<br>')
     count = 0
