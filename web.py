@@ -11,6 +11,15 @@ from urllib.parse import urlencode # use to structure a GET string
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 
+def checking(coord):
+  if isinstance(Coordinates, list):
+    if Coordinates.count(coord) > 0:
+      print('<input type="checkbox" name="option" value=coord checked>')
+    else:
+      print('<input type="checkbox" name="option" value=coord>')
+  else:
+    print('<input type="checkbox" name="option" value=coord>')
+
 # html code
 print('Content-type: text/html\n\n')
 print('<html>')
@@ -28,14 +37,14 @@ print('<br>')
 print('Place Ships <br>')
 print('<form action="/cgi-bin/web.py" method="POST">')
 
-if isinstance(Coordinates, list):
-  if Coordinates.count('A1') > 0:
-    print('<input type="checkbox" name="option" value="A1" checked>')
-  else:
-    print('<input type="checkbox" name="option" value="A1">')
-else:
-  print('<input type="checkbox" name="option" value="A1">')
-
+#if isinstance(Coordinates, list):
+  #if Coordinates.count('A1') > 0:
+    #print('<input type="checkbox" name="option" value="A1" checked>')
+  #else:
+    #print('<input type="checkbox" name="option" value="A1">')
+#else:
+  #print('<input type="checkbox" name="option" value="A1">')
+checking('A1')
 
 print('<input type="checkbox" name="option" value="A2">')
 print('<input type="checkbox" name="option" value="A3">')
