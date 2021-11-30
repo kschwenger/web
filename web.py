@@ -68,15 +68,17 @@ print("""
 <style>
 .grid-container {
 display: grid;
-grid-template-columns: auto auto auto auto auto auto auto auto;
-background-color: #2196F3;
-padding: 10px;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+aspect-ratio: 1
+height: 400px
+width: 400px
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
 border: 1px solid rgba(0, 0, 0, 0.8);
-padding: 20px;
-font-size: 30px;
+padding: 15px;
+font-size: 20px;
 text-align: center;
 }
 </style>
@@ -93,74 +95,5 @@ for elem in AllCoords:
     print('<div class="grid-item">X</div>')
   else:
     print('<div class="grid-item"> </div>')
-
-"""
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> </div>
-<div class="grid-item"> 
-</div>
-
-</body>
-"""
 
 print('</html>')
