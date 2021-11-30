@@ -96,12 +96,12 @@ for elem in AllCoords:
     if Coordinates.count(elem) > 0:
       print('<div class="grid-item">X</div>')
     else:
-    print('<div class="grid-item"> </div>')
+      print('<div class="grid-item"> </div>')
   elif isinstance(Coordinates, str):
     if Coordinates == elem:
       print('<div class="grid-item">X</div>')
     else:
-    print('<div class="grid-item"> </div>')
+      print('<div class="grid-item"> </div>')
   else:
     print('<div class="grid-item"> </div>')
 
