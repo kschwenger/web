@@ -29,7 +29,7 @@ print("""
 <style>
 .grid-container {
 display: grid;
-grid-template-columns: auto auto auto auto auto auto auto auto;
+grid-template-columns: 10px auto auto auto auto auto auto auto;
 background-color: #2196F3;
 padding: 10px;
 }
@@ -44,11 +44,7 @@ text-align: center;
 </head>
 <body>
 
-<h1>Grid Elements</h1>
-
-<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
-
-<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+<h1>BATTLESHIP</h1>
 
 <div class="grid-container">
 <div class="grid-item">1</div>
