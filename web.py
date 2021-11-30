@@ -41,6 +41,9 @@ print('Content-type: text/html\n\n')
 print('<html>')
 
 # make sure something is selected, print the coordinates list (or singular coordinate)
+
+print('<h1>BATTLESHIP</h1>')
+
 if isinstance(Coordinates, list):
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
@@ -86,11 +89,10 @@ text-align: center;
 </head>
 <body>
 
-<h1>BATTLESHIP</h1>
-
 <div class="grid-container">
 
 """)
+#update 
 for elem in AllCoords:
   if isinstance(Coordinates, list):
     if Coordinates.count(elem) > 0:
