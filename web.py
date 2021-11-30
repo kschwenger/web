@@ -31,6 +31,8 @@ print('<form action="/cgi-bin/web.py" method="POST">')
 if isinstance(Coordinates, list):
   if Coordinates.count('A1') > 0:
     print('<input type="checkbox" name="option" value="A1" checked>')
+  else:
+    print('<input type="checkbox" name="option" value="A1">')
 else:
   print('<input type="checkbox" name="option" value="A1">')
 
