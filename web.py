@@ -111,7 +111,7 @@ print("""
 <style>
 .grid-container {
 display: grid;
-grid-template-columns: 10px 10px 10px 10px 10px 10px 10px 10px;
+grid-template-columns: auto auto auto auto auto auto auto auto;
 background-color: #2196F3;
 padding: 10px;
 }
