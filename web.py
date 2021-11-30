@@ -104,5 +104,5 @@ for elem in AllCoords:
       print('<div class="grid-item"> </div>')
   else:
     print('<div class="grid-item"> </div>')
-
+print('</body>')
 print('</html>')
