@@ -72,7 +72,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 400px;
-width: 400px;d
+width: 400px;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
@@ -91,8 +91,12 @@ text-align: center;
 
 """)
 for elem in AllCoords:
-  if Coordinates.count(elem) > 0:
-    print('<div class="grid-item">X</div>')
+  if isinstance(Coordinates, list):
+    if Coordinates.count(elem) > 0:
+      print('<div class="grid-item">X</div>')
+  elif isinstance(Coordinates, str):
+    if Coordinates == elem:
+      print('<div class="grid-item">X</div>')
   else:
     print('<div class="grid-item"> </div>')
 
