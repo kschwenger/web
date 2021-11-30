@@ -15,7 +15,7 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 print('Content-type: text/html\n\n')
 print('<html>')
 
-if len(Coordinates) > 0:
+if isinstance(Coordinates, list):
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
     print('  ' + Coordinates[i])
