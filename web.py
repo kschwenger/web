@@ -18,21 +18,18 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 def checking(coord): # check each coord to see if already picked, display as checked if so
   global count
   if isinstance(Coordinates, list):
-    count += 1    
     if Coordinates.count(coord) > 0:
       print('<input type="checkbox" name="option" value="%s" checked>' % coord)
     else:
       print('<input type="checkbox" name="option" value="%s">' % coord)
   elif isinstance(Coordinates, str):
-    count += 1
     if Coordinates == coord:
       print('<input type="checkbox" name="option" value="%s" checked>' % coord)
     else:
       print('<input type="checkbox" name="option" value="%s">' % coord)
   else:
-    count += 1
     print('<input type="checkbox" name="option" value="%s">' % coord)
-  
+  count += 1
   if count >= 8: 
     print('<br>')
     count = 0
@@ -91,11 +88,13 @@ text-align: center;
 <div class="grid-container">
 
 """)
-if Coordinates.count('A1') > 0:
-  print('<div class="grid-item">X</div>')
-else:
-  print('<div class="grid-item"> </div>')
-print("""
+for elem in AllCoords:
+  if Coordinates.count(elem) > 0:
+    print('<div class="grid-item">X</div>')
+  else:
+    print('<div class="grid-item"> </div>')
+
+"""
 <div class="grid-item"> </div>
 <div class="grid-item"> </div>
 <div class="grid-item"> </div>
@@ -162,6 +161,6 @@ print("""
 </div>
 
 </body>
-""")
+"""
 
 print('</html>')
