@@ -113,6 +113,7 @@ text-align: center;
 <div class="grid-item">1</div>
 <div class="grid-item">1</div>
 <div class="grid-item">1</div>
+<div class="grid-item">1</div>
 <div class="grid-item">2
 </div>
 
