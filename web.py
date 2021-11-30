@@ -35,12 +35,14 @@ print('Content-type: text/html\n\n')
 print('<html>')
 
 # make sure something is selcted, print the coordinates list 
-if Coordinates is None:
-  print('No selection, select again')
-else:
+if isinstance(Coordinates, list):
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
     print('  ' + Coordinates[i])
+elif isinstance(Coordinates, str):
+  print('Previous Selections: ' + Coordinates)
+else:
+  print('No selection, select again')
 
 # rest is the same as html for now
 print('<br>')
