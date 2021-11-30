@@ -70,7 +70,7 @@ print("""
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-aspect-ratio: 1
+aspect-ratio: 1;
 height: 400px
 width: 400px
 }
