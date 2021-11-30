@@ -30,7 +30,9 @@ def checking(coord): # check each coord to see if already picked, display as che
     else:
       print('<input type="checkbox" name="option" value="%s">' % coord)
   else:
+    count += 1
     print('<input type="checkbox" name="option" value="%s">' % coord)
+  
   if count >= 8: 
     print('<br>')
     count = 0
