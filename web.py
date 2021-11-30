@@ -33,7 +33,7 @@ else:
   print('<input type="checkbox" name="option" value="A1">')
 
 
-print('<div class="grid-item"> </div>')print('<input type="checkbox" name="option" value="A2">')
+print('<input type="checkbox" name="option" value="A2">')
 print('<input type="checkbox" name="option" value="A3">')
 print('<input type="checkbox" name="option" value="A4">')
 print('<input type="checkbox" name="option" value="A5">')
