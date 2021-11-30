@@ -13,6 +13,7 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 count = 0
 
 def checking(coord):
+  global count
   if isinstance(Coordinates, list):
     count += 1    
     if Coordinates.count(coord) > 0:
