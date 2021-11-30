@@ -129,7 +129,13 @@ text-align: center;
 <h1>BATTLESHIP</h1>
 
 <div class="grid-container">
-<div class="grid-item"> </div>
+
+""")
+if Coordinates.count('A1') > 0:
+  print('<div class="grid-item">X</div>')
+else:
+  print('<div class="grid-item"> </div>')
+print("""
 <div class="grid-item"> </div>
 <div class="grid-item"> </div>
 <div class="grid-item"> </div>
