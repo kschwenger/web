@@ -94,12 +94,12 @@ text-align: center;
 for elem in AllCoords:
   if isinstance(Coordinates, list):
     if Coordinates.count(elem) > 0:
-      print('<div class="grid-item">X</div>')
+      print('<div class="grid-item">x</div>')
     else:
       print('<div class="grid-item"> </div>')
   elif isinstance(Coordinates, str):
     if Coordinates == elem:
-      print('<div class="grid-item">X</div>')
+      print('<div class="grid-item">x</div>')
     else:
       print('<div class="grid-item"> </div>')
   else:
