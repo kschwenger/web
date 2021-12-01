@@ -4,10 +4,10 @@ from time import sleep
 submissions = 0
 #ships = {}
 
-def separate(l, k):     # remove any coordinate from new ship if its in old ship
-  for i in range(len(l)):
-    if l[i] in k:
-      k.remove(l[i])
+def separate(k, l):     # remove any coordinate from new ship if its in old ship
+  for i in range(len(k)):
+    if k[i] in l:
+      l.remove(k[i])
 
 while True:         #try a counter variable, stops after 4 ships saved? saves each submitted to a different integer key?
   with open('web.txt', 'r') as f:
