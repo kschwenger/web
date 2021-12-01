@@ -37,7 +37,7 @@ while True:         #try a counter variable, stops after 4 ships saved? saves ea
   #else: 
     #ships["ship"] = " "
 
-  print(ships)
+  #print(ships)
 
   data2send = {"Coordinates":" ", "submitted":" "}
   with open('web.txt', 'w') as f:
