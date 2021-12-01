@@ -1,4 +1,4 @@
-a#!/usr/bin/python37all
+#!/usr/bin/python37all
 
 import cgi
 import cgitb # see next line
