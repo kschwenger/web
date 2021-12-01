@@ -9,7 +9,7 @@ def separate(k, l):     # remove any coordinate from new ship if its in old ship
     if k[i] in l:
       l.remove(k[i])
 
-def sepall():
+def sepall():           # separate all ship coordinates
   separate(Battleship, Submarine1)
   separate(Battleship, Submarine2)
   separate(Battleship, Destroyer)
@@ -17,51 +17,46 @@ def sepall():
   separate(Submarine1, Destroyer)
   separate(Submarine2, Destroyer)
 
-while True:         #try a counter variable, stops after 4 ships saved? saves each submitted to a different integer key?
+while True:
+  # read txt file
   with open('web.txt', 'r') as f:
     data = json.load(f)
   
-  if data["submitted"] == "Submit": # IF SUBMITTED, UPDATE SHIP, IF NOT  make ships empty (how to separate/save different ships?)
+  # update ships if user has clicked Submit
+  if data["submitted"] == "Submit":
     submissions += 1
 
+    # update Battleship coords
     if submissions == 1:
       #ships["Battleship"] = data["Coordinates"]
       Battleship = data["Coordinates"]
-
+    # update Sub1 coords
     elif submissions == 2:
       #ships["Submarine 1"] = data["Coordinates"]
       Submarine1 = data["Coordinates"]
+    # update Sub2 coords
     elif submissions == 3:
       #ships["Submarine 2"] = data["Coordinates"]
       Submarine2 = data["Coordinates"]
-
+    #update Destroyer coords
     elif submissions == 4:
       #ships["Destroyer"] = data["Coordinates"]
       Destroyer = data["Coordinates"]
-
-
-    #ships["ship"] = data["Coordinates"]
-  #else: 
-    #ships["ship"] = " "
-
-  #print(ships)
-
+  
+  # send blank to txt file
   data2send = {"Coordinates":" ", "submitted":" "}
   with open('web.txt', 'w') as f:
     json.dump(data2send,f)
   sleep(0.1)
 
+  # stop loop after all ships submitted
   if submissions > 3:
     break
 
 sepall()
 
-print("All ships selected")
+print("All ships placed")
 print(Battleship)
 print(Submarine1)
 print(Submarine2)
 print(Destroyer)
-# if len = 4: save [0-3] as battleship
-# if len = 7: save new coords as submarine
-# if len = 10: save new coords as submarine
-# if len = 12: save new coords as destroyer
