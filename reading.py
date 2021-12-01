@@ -1,4 +1,5 @@
 import json
+from time import sleep
 
 ships = {}
 
@@ -6,6 +7,12 @@ while True:
   with open('web.txt', 'r') as f:
     data = json.load(f)
   
-  ships["destroyer"] = data["Coordinates"]
+  ships["ship"] = data["Coordinates"]
 
-  print(ships["destroyer"])
+  print(ships["ship"])
+
+  data2send = {"Coordinates":" "}
+  with open('Lab5.txt', 'w') as f:
+    json.dump(data2send,f)
+  
+  sleep(0.1)
