@@ -50,10 +50,17 @@ if isinstance(Coordinates, list):
   for i in range(len(Coordinates)):
     print('  ' + Coordinates[i])
 
-
-  # rest is the same as html for now
+  # html stuff
   print('<br>')
-  print('Place Ships <br>')
+  if len(Coordinates == 4):
+    print('Place Ships <br>')
+  elif len(Coordinates == 7):
+    print('Place Submarine 1')
+  elif len(Coordinates == 10):
+    print('Place Submarine 2')
+  elif len(Coordinates == 12):
+    print('Place Destroyer')
+    
   print('<form action="/cgi-bin/web.py" method="POST">')
 
   for elem in AllCoords:
