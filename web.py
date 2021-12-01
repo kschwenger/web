@@ -15,6 +15,11 @@ count = 0
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 
+# send data to json file
+data2send = {"Coordinates":Coordinates}
+with open('web.txt', 'w') as f:
+  json.dump(data2send,f)
+
 def checking(coord): # check each coord to see if already picked, display as checked if so
   global count
   if isinstance(Coordinates, list):
@@ -39,11 +44,9 @@ def checking(coord): # check each coord to see if already picked, display as che
 # html code
 print('Content-type: text/html\n\n')
 print('<html>')
-
-# make sure something is selected, print the coordinates list (or singular coordinate)
-
 print('<h1>BATTLESHIP</h1>')
 
+# make sure something is selected, print the coordinates list (or singular coordinate)
 if isinstance(Coordinates, list):
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
@@ -62,9 +65,7 @@ for elem in AllCoords:
   checking(elem)
 
 print('<input type="submit" value="Submit">')
-
 print('</form>')
-
 
 # grid display
 print("""
