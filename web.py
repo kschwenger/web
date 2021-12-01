@@ -106,8 +106,13 @@ else: #dont do everything, repick coordinates with same html
   with open('web.txt', 'w') as f:
     json.dump(data2send,f)
   
-  # display unchecked grids
+  print('Place Ships <br>')
+  print('<form action="/cgi-bin/web.py" method="POST">')
+
   for elem in AllCoords:
     checking(elem)
+
+  print('<input type="submit" name="submitted" value="Submit">')
+  print('</form>')
 
 print('</html>')
