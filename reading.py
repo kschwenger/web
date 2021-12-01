@@ -9,6 +9,14 @@ def separate(k, l):     # remove any coordinate from new ship if its in old ship
     if k[i] in l:
       l.remove(k[i])
 
+def sepall():
+  separate(Battleship, Submarine1)
+  separate(Battleship, Submarine2)
+  separate(Battleship, Destroyer)
+  separate(Submarine1, Submarine2)
+  separate(Submarine1, Destroyer)
+  separate(Submarine2, Destroyer)
+
 while True:         #try a counter variable, stops after 4 ships saved? saves each submitted to a different integer key?
   with open('web.txt', 'r') as f:
     data = json.load(f)
@@ -46,12 +54,7 @@ while True:         #try a counter variable, stops after 4 ships saved? saves ea
   if submissions > 3:
     break
 
-separate(Battleship, Submarine1)
-separate(Battleship, Submarine2)
-separate(Battleship, Destroyer)
-separate(Submarine1, Submarine2)
-separate(Submarine1, Destroyer)
-separate(Submarine2, Destroyer)
+sepall()
 
 print("All ships selected")
 print(Battleship)
