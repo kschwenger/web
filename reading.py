@@ -5,9 +5,9 @@ submissions = 0
 #ships = {}
 
 def separate(l, k):     # remove any coordinate from new ship if its in old ship
-  for i in range(len(k)):
-    if k[i] in l:
-      l.remove(k[i])
+  for i in range(len(l)):
+    if l[i] in k:
+      k.remove(l[i])
 
 while True:         #try a counter variable, stops after 4 ships saved? saves each submitted to a different integer key?
   with open('web.txt', 'r') as f:
@@ -47,8 +47,8 @@ while True:         #try a counter variable, stops after 4 ships saved? saves ea
     break
 
 separate(Battleship, Submarine1)
-#separate(Submarine1, Submarine2)
-#separate(Submarine2, Destroyer)
+separate(Submarine1, Submarine2)
+separate(Submarine2, Destroyer)
 
 print("All ships selected")
 print(Battleship)
