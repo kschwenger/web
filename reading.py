@@ -47,8 +47,8 @@ while True:         #try a counter variable, stops after 4 ships saved? saves ea
     break
 
 separate(Battleship, Submarine1)
-separate(Submarine1, Submarine2)
-separate(Submarine2, Destroyer)
+#separate(Submarine1, Submarine2)
+#separate(Submarine2, Destroyer)
 
 print("All ships selected")
 print(Battleship)
