@@ -8,7 +8,7 @@ def separate(l, k):     # remove any coordinate from new ship if its in old ship
   for i in range(len(k)):
     if k[i] in l:
       r = l.index(k[i])
-      l.remove[r]
+      del l(r)
 
 while True:         #try a counter variable, stops after 4 ships saved? saves each submitted to a different integer key?
   with open('web.txt', 'r') as f:
