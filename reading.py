@@ -12,7 +12,7 @@ while True:
   print(ships["ship"])
 
   data2send = {"Coordinates":" "}
-  with open('Lab5.txt', 'w') as f:
+  with open('web.txt', 'w') as f:
     json.dump(data2send,f)
   
   sleep(0.1)
