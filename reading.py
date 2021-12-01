@@ -56,11 +56,11 @@ while True:
 sepall()
 
 print("All ships placed")
-print("Battleship coordinates: "
+print("Battleship coordinates: ")
 print(Battleship)
-print("Submarine 1 coordinates: "
+print("Submarine 1 coordinates: ")
 print(Submarine1)
-print("Submarine 2 coordinates: "
+print("Submarine 2 coordinates: ")
 print(Submarine2)
-print("Destroyer coordinates: "
+print("Destroyer coordinates: ")
 print(Destroyer)
