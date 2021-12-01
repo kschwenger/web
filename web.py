@@ -99,7 +99,7 @@ if isinstance(Coordinates, list):
   print('</body>')
 
 else: #dont do everything, repick coordinates with same html
-  print('Invalid selection, select again')
+  print('Invalid selection, select again <br>')
   
   # send nothing to txt file
   data2send = {"Coordinates":" ", "submitted":" "}
