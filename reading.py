@@ -47,7 +47,10 @@ while True:         #try a counter variable, stops after 4 ships saved? saves ea
     break
 
 separate(Battleship, Submarine1)
+separate(Battleship, Submarine2)
+separate(Battleship, Destroyer)
 separate(Submarine1, Submarine2)
+separate(Submarine1, Destroyer)
 separate(Submarine2, Destroyer)
 
 print("All ships selected")
