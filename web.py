@@ -42,7 +42,6 @@ def checking(coord): # check each coord to see if already picked, display as che
     print('<br>')
     count = 0
 
-
 # html code
 print('Content-type: text/html\n\n')
 print('<html>')
