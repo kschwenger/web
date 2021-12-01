@@ -10,11 +10,24 @@ while True:         #try a counter variable, stops after 4 ships saved? saves ea
   
   if data["submitted"] == "Submit": # IF SUBMITTED, UPDATE SHIP, IF NOT  make ships empty (how to separate/save different ships?)
     submissions += 1
-    ships["ship"] = data["Coordinates"]
-  else: 
-    ships["ship"] = " "
 
-  print(ships["ship"])
+    if submissions = 1:
+      ships["Battleship"] = data["Coordinates"]
+
+    elif submissions = 2:
+      ships["Submarine 1"] = data["Coordinates"]
+
+    elif submissions = 3:
+      ships["Submarine 2"] = data["Coordinates"]
+
+    elif submissions = 4:
+      ships["Destroyer"] = data["Coordinates"]
+
+    #ships["ship"] = data["Coordinates"]
+  #else: 
+    #ships["ship"] = " "
+
+  print(ships)
 
   data2send = {"Coordinates":" ", "submitted":" "}
   with open('web.txt', 'w') as f:

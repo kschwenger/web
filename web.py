@@ -1,4 +1,4 @@
-#!/usr/bin/python37all
+a#!/usr/bin/python37all
 
 import cgi
 import cgitb # see next line
@@ -94,7 +94,8 @@ text-align: center;
 <div class="grid-container">
 
 """)
-#update 
+
+# update grid
 for elem in AllCoords:
   if isinstance(Coordinates, list):
     if Coordinates.count(elem) > 0:
