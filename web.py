@@ -52,15 +52,15 @@ if isinstance(Coordinates, list):
 
   # html stuff
   print('<br>')
-  if len(Coordinates == 4):
+  if len(Coordinates) == 4:
     print('Place Ships <br>')
-  elif len(Coordinates == 7):
+  elif len(Coordinates) == 7:
     print('Place Submarine 1')
-  elif len(Coordinates == 10):
+  elif len(Coordinates) == 10:
     print('Place Submarine 2')
-  elif len(Coordinates == 12):
+  elif len(Coordinates) == 12:
     print('Place Destroyer')
-    
+
   print('<form action="/cgi-bin/web.py" method="POST">')
 
   for elem in AllCoords:
