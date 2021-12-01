@@ -10,7 +10,7 @@ while True:
   if data["submitted"] == "Submit": # IF SUBMITTED, UPDATE SHIP, IF NOT DONT 
     ships["ship"] = data["Coordinates"]
   else: 
-    pass
+    ships["ship"] = " "
 
   print(ships["ship"])
 
