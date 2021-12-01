@@ -40,7 +40,7 @@ if isinstance(Coordinates, list):
   # send data to json file
   data2send = {"Coordinates":Coordinates, "submitted":Submit}
   with open('web.txt', 'w') as f:
-  json.dump(data2send,f)
+    json.dump(data2send,f)
 
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
