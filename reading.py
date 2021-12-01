@@ -8,6 +8,7 @@ def separate(l, k):
   for i in range(len(k)):
     if k[i] in l:
       r = k[i]
+      print(ra)
       l.remove[r]
 
 while True:         #try a counter variable, stops after 4 ships saved? saves each submitted to a different integer key?
