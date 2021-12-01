@@ -14,10 +14,14 @@ count = 0
 def checking(coord): # check each coord to see if already picked, display as checked if so
   global count
 
-  if Coordinates.count(coord) > 0:
-    print('<input type="checkbox" name="option" value="%s" checked>' % coord)
+  if isinstance(Coordinates, list):
+    if Coordinates.count(coord) > 0:
+      print('<input type="checkbox" name="option" value="%s" checked>' % coord)
+    else:
+      print('<input type="checkbox" name="option" value="%s">' % coord)
+  
   else:
-    print('<input type="checkbox" name="option" value="%s">' % coord)
+      print('<input type="checkbox" name="option" value="%s">' % coord)
   
   count += 1
   if count >= 8: 
