@@ -14,9 +14,11 @@ count = 0
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
+Submit = dataFromhtml.getvalue('submitted')
+
 
 # send data to json file
-data2send = {"Coordinates":Coordinates}
+data2send = {"Coordinates":Coordinates, "submitted":Submit}
 with open('web.txt', 'w') as f:
   json.dump(data2send,f)
 
@@ -64,7 +66,7 @@ print('<form action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
   checking(elem)
 
-print('<input type="submit" value="Submit">')
+print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
 
 # grid display
