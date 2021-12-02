@@ -33,6 +33,9 @@ print('Content-type: text/html\n\n')
 print('<html>')
 print('<h1>BATTLESHIP</h1>')
 
+# how to save a ship selection if the selction (after the fist) is invalid (how to not clear whole board, just the new invalid selection)?
+
+
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
@@ -49,6 +52,7 @@ if isinstance(Coordinates, list):
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
     print('  ' + Coordinates[i])
+  print('<br>')
 
   # html stuff
   print('<br>')
@@ -58,6 +62,8 @@ if isinstance(Coordinates, list):
     print('Place Submarine 2 <br>')
   elif len(Coordinates) == 10:
     print('Place Destroyer <br>')
+  else:
+    print('Invalid selection, select again ')
 
   print('<form action="/cgi-bin/web.py" method="POST">')
 

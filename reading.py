@@ -4,7 +4,7 @@ from time import sleep
 submissions = 0
 #ships = {}
 
-def separate(k, l):     # remove any coordinate from new ship if its in old ship
+def separate(k, l):     # remove any coordinate from new ship if they are in old ship
   for i in range(len(k)):
     if k[i] in l:
       l.remove(k[i])
