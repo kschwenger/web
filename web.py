@@ -62,6 +62,8 @@ if isinstance(Coordinates, list):
     print('Place Submarine 2 <br>')
   elif len(Coordinates) == 10:
     print('Place Destroyer <br>')
+  elif len(Coordinates) == 12:
+    print('All ships placed <br>')
   else:
     print('Invalid selection, select again ')
 
