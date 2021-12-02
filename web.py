@@ -128,4 +128,37 @@ else: #dont do everything, repick coordinates with same html
   print('<input type="submit" name="submitted" value="Submit">')
   print('</form>')
 
+  # grid display
+  print("""
+  <head>
+  <style>
+  .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  aspect-ratio: 1;
+  height: 400px;
+  width: 400px;
+  }
+  .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  }
+  </style>
+  </head>
+  <body>
+
+  <div class="grid-container">
+
+  """)
+
+  # update grid
+  for elem in AllCoords:
+    print('<div class="grid-item"> </div>')
+    
+  print('</body>')
+
 print('</html>')
