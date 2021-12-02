@@ -10,12 +10,12 @@ def separate(k, l):     # remove any coordinate from new ship if they are in old
       l.remove(k[i])
 
 def sepall():           # separate all ship coordinates
-  separate(Battleship, Submarine1)
-  separate(Battleship, Submarine2)
+  separate(Battleship, Submarine)
+  separate(Battleship, Cruiser)
   separate(Battleship, Destroyer)
-  separate(Submarine1, Submarine2)
-  separate(Submarine1, Destroyer)
-  separate(Submarine2, Destroyer)
+  separate(Submarine, Cruiser)
+  separate(Submarine, Destroyer)
+  separate(Cruiser, Destroyer)
 
 while True:
   # read txt file
@@ -33,11 +33,11 @@ while True:
     # update Sub1 coords
     elif submissions == 2:
       #ships["Submarine 1"] = data["Coordinates"]
-      Submarine1 = data["Coordinates"]
+      Submarine = data["Coordinates"]
     # update Sub2 coords
     elif submissions == 3:
       #ships["Submarine 2"] = data["Coordinates"]
-      Submarine2 = data["Coordinates"]
+      Cruiser = data["Coordinates"]
     #update Destroyer coords
     elif submissions == 4:
       #ships["Destroyer"] = data["Coordinates"]
@@ -59,8 +59,8 @@ print("All ships placed")
 print("Battleship coordinates: ")
 print(Battleship)
 print("Submarine 1 coordinates: ")
-print(Submarine1)
+print(Submarine)
 print("Submarine 2 coordinates: ")
-print(Submarine2)
+print(Cruiser)
 print("Destroyer coordinates: ")
 print(Destroyer)

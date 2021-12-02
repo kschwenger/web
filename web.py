@@ -57,11 +57,11 @@ if isinstance(Coordinates, list):
   # html stuff
   print('<br>')
   if len(Coordinates) == 4:
-    print('Place Submarine 1 <br>')
+    print('Place Submarine 1 (3 coordinates) <br>')
   elif len(Coordinates) == 7:
-    print('Place Submarine 2 <br>')
+    print('Place Cruiser (3 coordinates) <br>')
   elif len(Coordinates) == 10:
-    print('Place Destroyer <br>')
+    print('Place Destroyer (2 coordinates) <br>')
   elif len(Coordinates) == 12:
     print('All ships placed <br>')
   else:
