@@ -33,7 +33,7 @@ def IsItValid(ship):
         break
       else:
         pass
-    else
+    else:
       print("%s is invalid!!!" % ship)
       break
 
