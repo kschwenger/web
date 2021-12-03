@@ -24,15 +24,18 @@ def IsItValid(ship):
     if ship[coordinate][0] == ship[coordinate+1][0]:
       if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1:
         print("invalid!")
+        break
       else:
-        print("valid!")
+        pass
     elif ship[coordinate][1] == ship[coordinate+1][1]:
       if abs(Rowdict[ship[coordinate][0]] - Rowdict[ship[coordinate+1][0]]) > 1:
         print("invalid!!")
+        break
       else:
-        print("valid!!")
+        pass
     else:
       print("invalid!!!")
+      break
 
 while True:
   # read txt file
