@@ -1,5 +1,6 @@
 #!/usr/bin/python37all
 
+import time
 import cgi
 import cgitb # see next line
 cgitb.enable() # exception handler, displays uncaught errors
