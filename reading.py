@@ -5,10 +5,10 @@ submissions = 0
 Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for sorting and validating purposes
 #ships = {}
 
-def separate(k, l):     # remove any coordinate from new ship k if they are in old ship l
-  for i in range(len(k)):
-    if k[i] in l:
-      l.remove(k[i])
+def separate(old, new):     # remove any coordinate from new ship k if they are in old ship l
+  for i in range(len(old)):
+    if old[i] in new:
+      new.remove(old[i])
 
 def sepall():           # separate all ship coordinates
   separate(Battleship, Submarine)
