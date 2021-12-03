@@ -1,6 +1,5 @@
 #!/usr/bin/python37all
 
-import time
 import cgi
 import cgitb # see next line
 cgitb.enable() # exception handler, displays uncaught errors
@@ -45,6 +44,11 @@ Submit = dataFromhtml.getvalue('submitted')
 
 if isinstance(Coordinates, list):
   #do everything
+  
+  # send data to json file
+  data2send = {"Coordinates":Coordinates, "submitted":Submit}
+  with open('web.txt', 'w') as f:
+    json.dump(data2send,f)
 
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
@@ -54,19 +58,7 @@ if isinstance(Coordinates, list):
   # html stuff
   print('<br>')
   if len(Coordinates) == 4:
-    # send data to json file
-    data2send = {"Coordinates":Coordinates, "submitted":Submit}
-    with open('web.txt', 'w') as f:
-      json.dump(data2send,f)
-    time.sleep(0.1)
-    with open('web.txt', 'r') as f:
-      backdata = json.load(f)
-    if backdata["Coordinates"] == 1:
-      print('Invalid Selection, select again')
-      # do something else
-    else:
-      print('Place Submarine (3 coordinates) <br>')
-  
+    print('Place Submarine (3 coordinates) <br>')
   elif len(Coordinates) == 7:
     print('Place Cruiser (3 coordinates) <br>')
   elif len(Coordinates) == 10:
