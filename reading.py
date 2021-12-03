@@ -17,6 +17,23 @@ def sepall():           # separate all ship coordinates
   separate(Submarine, Destroyer)
   separate(Cruiser, Destroyer)
 
+Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for parsing purposes
+# are they next to each other
+def IsItValid(ship):
+  for coordinate in range(len(ship)-1):
+    if ship[coordinate][0] == ship[coordinate+1][0]:
+      if abs(int(ship[coordinate][1] - int(ship[coordinate+1][1]))) > 1:
+        print("invalid!")
+      else:
+        print("valid!")
+    elif ship[coordinate][1] == ship[coordinate+1][1]:
+      if abs(Rowdict[ship[coordinate][0]] - Rowdict[ship[coordinate+1][0]]) > 1:
+        print("invalid!!")
+      else:
+        print("valid!!")
+    else:
+      print("invalid!!!")
+
 while True:
   # read txt file
   with open('web.txt', 'r') as f:
@@ -65,41 +82,4 @@ print(Cruiser)
 print("Destroyer coordinates: ")
 print(Destroyer)
 
-
-Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for parsing purposes
-# are they next to each other
-if Battleship[0][0] == Battleship[1][0]:  #if first and second coord are same letter
-  if Battleship[1][0] == Battleship[2][0]: #if second and third coord are same letter
-    if Battleship[2][0] == Battleship[3][0]: #if third and fourth coord are same letter 
-      if abs(int(Battleship[0][1]) - int(Battleship[1][1])) > 1: #if 1st and 2nd coord numbers are not next to each other
-        print("invalid!")
-      elif abs(int(Battleship[1][1]) - int(Battleship[2][1])) > 1:  #if 2nd and 3rd numbers are not next to each other
-        print("invalid!!")
-      elif abs(int(Battleship[2][1]) - int(Battleship[3][1])) > 1:  #if 3rd and 4th numbers are not next to each other
-        print("invalid!!!")
-      else:
-        print("Validdddd")
-    else:
-      print("invalid!")
-  else:
-    print("invalid")
-elif Battleship[0][1] == Battleship[1][1]:  #if first and second coord are same number 
-  if Battleship[1][1] == Battleship[2][1]:  #if second and third coord are same number
-    if Battleship[2][1] == Battleship[3][1]:  #if third and fourth coord are same number
-      if abs(Rowdict[Battleship[0][0]] - Rowdict[Battleship[1][0]]) > 1:  #if number of letter of 1st and 2nd coords not next
-        print("invalid")
-      elif abs(Rowdict[Battleship[1][0]] - Rowdict[Battleship[2][0]]) > 1:
-        print("invalid")
-      elif abs(Rowdict[Battleship[2][0]] - Rowdict[Battleship[3][0]]) > 1:
-        print("invalid")
-      else:
-        print("Valid")
-    else:
-      print("invalid")
-  else:
-    print("invalid")
-else:
-  print("innnnnnvalid")
-
-
-
+IsItValid(Battleship)
