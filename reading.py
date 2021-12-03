@@ -2,6 +2,7 @@ import json
 from time import sleep
 
 submissions = 0
+Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for sorting and validating purposes
 #ships = {}
 
 def separate(k, l):     # remove any coordinate from new ship k if they are in old ship l
@@ -17,9 +18,7 @@ def sepall():           # separate all ship coordinates
   separate(Submarine, Destroyer)
   separate(Cruiser, Destroyer)
 
-Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for parsing purposes
-# are they next to each other
-def IsItValid(ship):
+def IsItValid(ship):  # are they next to each other
   for coordinate in range(len(ship)-1):
     if ship[coordinate][0] == ship[coordinate+1][0]:
       if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1:
@@ -37,7 +36,7 @@ def IsItValid(ship):
       print("%s is invalid!!!" % ship)
       break
 
-def AreAllValid():
+def AreAllValid():  #check if all ships are valid
   IsItValid(Battleship)
   IsItValid(Submarine)
   IsItValid(Cruiser)

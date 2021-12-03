@@ -34,7 +34,8 @@ print('<html>')
 print('<h1>BATTLESHIP</h1>')
 
 # how to save a ship selection if the selction (after the fist) is invalid (how to not clear whole board, just the new invalid selection)?
-
+# maybe send data only after correct number (4,7,10,12)
+# do some validating within the main code and send back? can it be validated in cgi without saving?
 
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
