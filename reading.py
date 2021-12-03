@@ -53,8 +53,10 @@ while True:
     # update Battleship coords
     if submissions == 1:
       if IsItValid(data["Coordinates"]) == True:
+        print("valid")
         Battleship = data["Coordinates"]
       else:
+        print("invalid")
         submissions -= 1
         #return something to cgi
         data2send = {"Coordinates":False, "submitted":"invalid"}
