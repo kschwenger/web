@@ -3,7 +3,6 @@ from time import sleep
 
 submissions = 0
 Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for sorting and validating purposes
-#ships = {}
 
 def separate(old, new):     # remove any coordinate from new ship k if they are in old ship l
   for i in range(len(old)):
@@ -18,22 +17,22 @@ def sepall():           # separate all ship coordinates
   separate(Submarine, Destroyer)
   separate(Cruiser, Destroyer)
 
-def IsItValid(ship):  # are they next to each other
-  for coordinate in range(len(ship)-1):
-    if ship[coordinate][0] == ship[coordinate+1][0]:
-      if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1:
-        print("%s is invalid!" % ship)
+def IsItValid(coords):  # are they next to each other
+  for coordinate in range(len(coords)-1):
+    if coords[coordinate][0] == coords[coordinate+1][0]:
+      if abs(int(coords[coordinate][1]) - int(coords[coordinate+1][1])) > 1:
+        return False
         break
       else:
-        pass
-    elif ship[coordinate][1] == ship[coordinate+1][1]:
-      if abs(Rowdict[ship[coordinate][0]] - Rowdict[ship[coordinate+1][0]]) > 1:
-        print("%s is invalid!!" % ship)
+        return True
+    elif coords[coordinate][1] == coords[coordinate+1][1]:
+      if abs(Rowdict[coords[coordinate][0]] - Rowdict[coords[coordinate+1][0]]) > 1:
+        return False
         break
       else:
-        pass
+        return True
     else:
-      print("%s is invalid!!!" % ship)
+      return False
       break
 
 def AreAllValid():  #check if all ships are valid
@@ -53,19 +52,23 @@ while True:
 
     # update Battleship coords
     if submissions == 1:
-      #ships["Battleship"] = data["Coordinates"]
-      Battleship = data["Coordinates"]
+      if IsItValid(data["Coordinates"]) == True:
+        Battleship = data["Coordinates"]
+      else:
+        submissions -= 1
+        #return something to cgi
+        data2send = {"Coordinates":False, "submitted":"invalid"}
+        with open('web.txt', 'w') as f:
+          json.dump(data2send,f)
+          
     # update Sub1 coords
     elif submissions == 2:
-      #ships["Submarine 1"] = data["Coordinates"]
       Submarine = data["Coordinates"]
     # update Sub2 coords
     elif submissions == 3:
-      #ships["Submarine 2"] = data["Coordinates"]
       Cruiser = data["Coordinates"]
     #update Destroyer coords
     elif submissions == 4:
-      #ships["Destroyer"] = data["Coordinates"]
       Destroyer = data["Coordinates"]
   
   # send blank to txt file
