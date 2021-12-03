@@ -23,19 +23,25 @@ def IsItValid(ship):
   for coordinate in range(len(ship)-1):
     if ship[coordinate][0] == ship[coordinate+1][0]:
       if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1:
-        print("invalid!")
+        print("%s is invalid!" % ship)
         break
       else:
         pass
     elif ship[coordinate][1] == ship[coordinate+1][1]:
       if abs(Rowdict[ship[coordinate][0]] - Rowdict[ship[coordinate+1][0]]) > 1:
-        print("invalid!!")
+        print("%s is invalid!!" % ship)
         break
       else:
         pass
-    else:
-      print("invalid!!!")
+    else
+      print("%s is invalid!!!" % ship)
       break
+
+def AreAllValid():
+  IsItValid(Battleship)
+  IsItValid(Submarine)
+  IsItValid(Cruiser)
+  IsItValid(Destroyer)  
 
 while True:
   # read txt file
@@ -85,4 +91,4 @@ print(Cruiser)
 print("Destroyer coordinates: ")
 print(Destroyer)
 
-IsItValid(Battleship)
+AreAllValid()
