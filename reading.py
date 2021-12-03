@@ -58,7 +58,7 @@ while True:
         print("invalid")
         submissions -= 1
         #return something to cgi
-        data2send = {"Coordinates":"invalid", "submitted":"invalid"}
+        data2send = {"Coordinates":1, "submitted":1}
         with open('web.txt', 'w') as f:
           json.dump(data2send,f)
       else:
