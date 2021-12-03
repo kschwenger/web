@@ -4,7 +4,7 @@ from time import sleep
 submissions = 0
 #ships = {}
 
-def separate(k, l):     # remove any coordinate from new ship if they are in old ship
+def separate(k, l):     # remove any coordinate from new ship k if they are in old ship l
   for i in range(len(k)):
     if k[i] in l:
       l.remove(k[i])
@@ -65,13 +65,41 @@ print(Cruiser)
 print("Destroyer coordinates: ")
 print(Destroyer)
 
+
+Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for parsing purposes
 # are they next to each other
-if Battleship[0][0] == Battleship[1][0]:  #if same letter
-  if abs(int(Battleship[0][1]) - int(Battleship[1][1])) > 1:
-    print("invalid!")
-  elif abs(int(Battleship[1][1]) - int(Battleship[2][1])) > 1:
-    print("invalid!!")
-  elif abs(int(Battleship[2][1]) - int(Battleship[3][1])) > 1:
-    print("invalid!!!")
+if Battleship[0][0] == Battleship[1][0]:  #if first and second coord are same letter
+  if Battleship[1][0] == Battleship[2][0]: #if second and third coord are same letter
+    if Battleship[2][0] == Battleship[3][0]: #if third and fourth coord are same letter 
+      if abs(int(Battleship[0][1]) - int(Battleship[1][1])) > 1: #if 1st and 2nd coord numbers are not next to each other
+        print("invalid!")
+      elif abs(int(Battleship[1][1]) - int(Battleship[2][1])) > 1:  #if 2nd and 3rd numbers are not next to each other
+        print("invalid!!")
+      elif abs(int(Battleship[2][1]) - int(Battleship[3][1])) > 1:  #if 3rd and 4th numbers are not next to each other
+        print("invalid!!!")
+      else:
+        print("Validdddd")
+    else:
+      print("invalid!")
   else:
-    print("Validdddd")
+    print("invalid")
+elif Battleship[0][1] == Battleship[1][1]:  #if first and second coord are same number 
+  if Battleship[1][1] == Battleship[2][1]:  #if second and third coord are same number
+    if Battleship[2][1] == Battleship[3][1]:  #if third and fourth coord are same number
+      if abs(Rowdict[Battleship[0][0]] - Rowdict[Battleship[1][0]]) > 1:  #if number of letter of 1st and 2nd coords not next
+        print("invalid")
+      elif abs(Rowdict[Battleship[1][0]] - Rowdict[Battleship[2][0]]) > 1:
+        print("invalid")
+      elif abs(Rowdict[Battleship[2][0]] - Rowdict[Battleship[3][0]]) > 1:
+        print("invalid")
+      else:
+        print("Valid")
+    else:
+      print("invalid")
+  else:
+    print("invalid")
+else:
+  print("innnnnnvalid")
+
+
+
