@@ -58,7 +58,7 @@ if isinstance(Coordinates, list):
     data2send = {"Coordinates":Coordinates, "submitted":Submit}
     with open('web.txt', 'w') as f:
       json.dump(data2send,f)
-    time.sleep(0.1)
+    time.sleep(1)
     with open('web.txt', 'r') as f:
       backdata = json.load(f)
     if backdata["Coordinates"] == "invalid":
