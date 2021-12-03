@@ -67,11 +67,11 @@ print(Destroyer)
 
 # are they next to each other
 if Battleship[0][0] == Battleship[1][0]:  #if same letter
-  if abs(Battleship[0][1] - Battleship[1][1]) > 1:
+  if abs(int(Battleship[0][1]) - int(Battleship[1][1])) > 1:
     print("invalid!")
-  elif abs(Battleship[1][1] - Battleship[2][1]) > 1:
+  elif abs(int(Battleship[1][1]) - int(Battleship[2][1])) > 1:
     print("invalid!!")
-  elif abs(Battleship[2][1] - Battleship[3][1]) > 1:
+  elif abs(int(Battleship[2][1]) - int(Battleship[3][1])) > 1:
     print("invalid!!!")
   else:
     print("Validdddd")

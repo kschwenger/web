@@ -57,7 +57,7 @@ if isinstance(Coordinates, list):
   # html stuff
   print('<br>')
   if len(Coordinates) == 4:
-    print('Place Submarine 1 (3 coordinates) <br>')
+    print('Place Submarine (3 coordinates) <br>')
   elif len(Coordinates) == 7:
     print('Place Cruiser (3 coordinates) <br>')
   elif len(Coordinates) == 10:
