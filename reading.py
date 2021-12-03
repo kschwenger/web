@@ -52,7 +52,7 @@ while True:
   if data["submitted"] == "Submit":
     submissions += 1
 
-    # update Battleship coords
+    # update Battleship coords 
     if submissions == 1:
       if IsItValid(data["Coordinates"]) == False:
         print("invalid")
@@ -65,10 +65,10 @@ while True:
         print("valid")
         Battleship = data["Coordinates"]
 
-    # update Sub1 coords
+    # update Sub coords
     elif submissions == 2:
       Submarine = data["Coordinates"]
-    # update Sub2 coords
+    # update cruiser coords
     elif submissions == 3:
       Cruiser = data["Coordinates"]
     #update Destroyer coords
