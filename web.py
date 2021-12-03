@@ -60,8 +60,8 @@ if isinstance(Coordinates, list):
       json.dump(data2send,f)
     time.sleep(0.1)
     with open('web.txt', 'r') as f:
-      data = json.load(f)
-    if "Coordinates" == False:
+      backdata = json.load(f)
+    if backdata["Coordinates"] == "invalid":
       print('Invalid Selection, select again')
       # do something else
     else:
