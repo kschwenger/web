@@ -46,7 +46,7 @@ Submit = dataFromhtml.getvalue('submitted')
 
 if isinstance(Coordinates, list):
   #do everything
-  submit += 1
+  submits += 1
   # send data to json file
   data2send = {"Coordinates":Coordinates, "submitted":Submit}
   with open('web.txt', 'w') as f:
@@ -113,7 +113,7 @@ if isinstance(Coordinates, list):
       print('<div class="grid-item"> </div>')
     
   print('</body>')
-  print(submit)
+  print(submits)
 
 else: #dont do everything, repick coordinates with same html
   print('Invalid selection, select again <br>')
