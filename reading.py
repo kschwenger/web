@@ -18,22 +18,24 @@ def sepall():           # separate all ship coordinates
   separate(Cruiser, Destroyer)
 
 def IsItValid(coords):  # are they next to each other
+  Valid = True
   for coordinate in range(len(coords)-1):
     if coords[coordinate][0] == coords[coordinate+1][0]:
       if abs(int(coords[coordinate][1]) - int(coords[coordinate+1][1])) > 1:
-        return False
+        Valid = False
         break
       else:
-        return True
+        pass
     elif coords[coordinate][1] == coords[coordinate+1][1]:
       if abs(Rowdict[coords[coordinate][0]] - Rowdict[coords[coordinate+1][0]]) > 1:
-        return False
+        Valid =  False
         break
       else:
-        return True
+        pass
     else:
-      return False
+      Valid = False
       break
+  return Valid
 
 def AreAllValid():  #check if all ships are valid
   IsItValid(Battleship)
@@ -52,17 +54,17 @@ while True:
 
     # update Battleship coords
     if submissions == 1:
-      if IsItValid(data["Coordinates"]) == True:
-        print("valid")
-        Battleship = data["Coordinates"]
-      else:
+      if IsItValid(data["Coordinates"]) == False:
         print("invalid")
         submissions -= 1
         #return something to cgi
         data2send = {"Coordinates":False, "submitted":"invalid"}
         with open('web.txt', 'w') as f:
           json.dump(data2send,f)
-          
+      else:
+        print("valid")
+        Battleship = data["Coordinates"]
+
     # update Sub1 coords
     elif submissions == 2:
       Submarine = data["Coordinates"]
