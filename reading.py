@@ -22,7 +22,7 @@ Rowdict = {"A":1, "B":2, "C":3, "D":4, "E":5, "F":6, "G":7, "H":8} # for parsing
 def IsItValid(ship):
   for coordinate in range(len(ship)-1):
     if ship[coordinate][0] == ship[coordinate+1][0]:
-      if abs(int(ship[coordinate][1] - int(ship[coordinate+1][1]))) > 1:
+      if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1:
         print("invalid!")
       else:
         print("valid!")
