@@ -20,3 +20,5 @@ print(Destroyer)
 
 with open('SaveCoords.txt', 'w') as f:
   json.dump({"TotalCoords":[]},f)
+
+#12/4 4:25pm
