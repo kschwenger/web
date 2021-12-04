@@ -11,8 +11,6 @@ from urllib.parse import urlencode # use to structure a GET string
 AllCoords = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8']
 count = 0
 
-submits = 0
-
 def checking(coord): # check each coord to see if already picked, display as checked if so
   global count
 
@@ -30,6 +28,31 @@ def checking(coord): # check each coord to see if already picked, display as che
     print('<br>')
     count = 0
 
+def IsItValid(ship):  # are they next to each other
+  Valid = True
+  for coordinate in range(len(ship)-1):
+    if ship[coordinate][0] == ship[coordinate+1][0]:
+      if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1:
+        Valid = False
+        break
+      else:
+        pass
+    elif ship[coordinate][1] == ship[coordinate+1][1]:
+      if abs(Rowdict[ship[coordinate][0]] - Rowdict[ship[coordinate+1][0]]) > 1:
+        Valid = False
+        break
+      else:
+        pass
+    else:
+      Valid = False
+      break
+  return Valid
+
+def separate(old, new):     # remove any coordinate from new ship k if they are in old ship l
+  for i in range(len(old)):
+    if old[i] in new:
+      new.remove(old[i])
+
 # html code
 print('Content-type: text/html\n\n')
 print('<html>')
@@ -46,11 +69,6 @@ Submit = dataFromhtml.getvalue('submitted')
 
 if isinstance(Coordinates, list):
   #do everything
-  submits += 1
-  # send data to json file
-  data2send = {"Coordinates":Coordinates, "submitted":Submit}
-  with open('web.txt', 'w') as f:
-    json.dump(data2send,f)
 
   print('Previous Selections: ')
   for i in range(len(Coordinates)):
@@ -60,13 +78,46 @@ if isinstance(Coordinates, list):
   # html stuff
   print('<br>')
   if len(Coordinates) == 4:
-    print('Place Submarine (3 coordinates) <br>')
+    if IsItValid(Coordinates) == True
+      with open('SaveCoords.txt', 'w') as f:
+        json.dump({"Battleship":Coordinates},f)
+      with open('web.txt', 'w') as f:
+        json.dump({"Coordinates":Coordinates, "submitted":Submit},f)
+      print('Place Submarine (3 coordinates) <br>')
+    else:
+      print("Invalid selection, select again")
+  
   elif len(Coordinates) == 7:
-    print('Place Cruiser (3 coordinates) <br>')
+    with open('SaveCoords.txt', 'r') as f:
+      ships = json.load(f)
+    separate(ships["Battleship"], Coordinates)
+    if IsItValid(Coordinates) == True
+      with open('SaveCoords.txt', 'w') as f:
+        json.dump({"Battleship":ships["Battleship"], "Submarine":Coordinates},f)
+      with open('web.txt', 'w') as f:
+        json.dump({"Coordinates":Coordinates, "submitted":Submit},f)
+      print('Place Cruiser (3 coordinates) <br>')
+    else:
+      print("Invalid selection, select again")
+
+  
   elif len(Coordinates) == 10:
-    print('Place Destroyer (2 coordinates) <br>')
+    with open('SaveCoords.txt', 'r') as f:
+      ships = json.load(f)
+    separate(ships["Battleship"], Coordinates)
+    separate(ships["Submarine"], Coordinates)
+    if IsItValid(Coordinates) == True
+      with open('SaveCoords.txt', 'w') as f:
+        json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Coordinates},f)
+      with open('web.txt', 'w') as f:
+        json.dump({"Coordinates":Coordinates, "submitted":Submit},f)
+      print('Place Destroyer (2 coordinates) <br>')
+    else:
+      print('Invalid Selection, select again')
+  
   elif len(Coordinates) == 12:
     print('All ships placed <br>')
+  
   else:
     print('Invalid selection, select again ')
 
@@ -113,7 +164,6 @@ if isinstance(Coordinates, list):
       print('<div class="grid-item"> </div>')
     
   print('</body>')
-  print(submits)
 
 else: #dont do everything, repick coordinates with same html
   print('Invalid selection, select again <br>')
