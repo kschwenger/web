@@ -180,7 +180,7 @@ if isinstance(Coordinates, list):
   print('</body>')
 
 else: #dont do everything, repick coordinates with same html
-  print('Invalid selection, select again <br>')
+  print('Invalid selection, Place Battleship (4 coordinates) <br>')
   
   print('Place Ships <br>')
   print('<form action="/cgi-bin/web.py" method="POST">')
