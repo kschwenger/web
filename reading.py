@@ -45,28 +45,28 @@ def AreAllValid():  #check if all ships are valid
 while True:
   # read txt file
   with open('web.txt', 'r') as f:
-    data = json.load(f)
+    ships = json.load(f)
   
   # update ships if user has clicked Submit
-  if data["submitted"] == "Submit":
+  if ships["submitted"] == "Submit":
     submissions += 1
 
     # update Battleship coords
     if submissions == 1:
       #ships["Battleship"] = data["Coordinates"]
-      Battleship = data["Coordinates"]
+      Battleship = ships["Battleship"]
     # update Sub1 coords
     elif submissions == 2:
       #ships["Submarine 1"] = data["Coordinates"]
-      Submarine = data["Coordinates"]
+      Submarine = ships["Submarine"]
     # update Sub2 coords
     elif submissions == 3:
       #ships["Submarine 2"] = data["Coordinates"]
-      Cruiser = data["Coordinates"]
+      Cruiser = ships["Cruiser"]
     #update Destroyer coords
     elif submissions == 4:
       #ships["Destroyer"] = data["Coordinates"]
-      Destroyer = data["Coordinates"]
+      Destroyer = ships["Destroyer"]
   
   # send blank to txt file
   data2send = {"Coordinates":" ", "submitted":" "}
@@ -78,7 +78,7 @@ while True:
   if submissions > 3:
     break
 
-sepall()
+#sepall()
 
 print("All ships placed")
 print("Battleship coordinates: ")
@@ -90,4 +90,4 @@ print(Cruiser)
 print("Destroyer coordinates: ")
 print(Destroyer)
 
-AreAllValid()
+#AreAllValid()
