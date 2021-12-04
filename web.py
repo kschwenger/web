@@ -94,6 +94,7 @@ if isinstance(Coordinates, list):
     with open('SaveCoords.txt', 'r') as f:
       ships = json.load(f)
     separate(ships["Battleship"], Submarine)
+    print(Coordinates)
     if IsItValid(Submarine) == True:
       with open('SaveCoords.txt', 'w') as f:
         json.dump({"Battleship":ships["Battleship"], "Submarine":Submarine},f)
