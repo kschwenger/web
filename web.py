@@ -119,7 +119,7 @@ if isinstance(Coordinates, list):
     if os.path.isfile('SaveCoords.txt'):
       with open('SaveCoords.txt', 'r') as f:
         ships = json.load(f)
-      if ships.has_key("TotalCoords"):
+      if "totalCoords" in ships:
         Coordinates = ships["TotalCoords"]
       else:
         Coordinates = []
