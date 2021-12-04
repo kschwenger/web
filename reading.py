@@ -8,7 +8,6 @@ Submarine = ships["Submarine"]
 Cruiser = ships["Cruiser"]
 Destroyer = ships["Destroyer"]
 
-
 print("All ships placed")
 print("Battleship coordinates: ")
 print(Battleship)
@@ -18,4 +17,3 @@ print("Cruiser coordinates: ")
 print(Cruiser)
 print("Destroyer coordinates: ")
 print(Destroyer)
-

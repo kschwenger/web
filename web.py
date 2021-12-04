@@ -3,8 +3,8 @@
 import cgi
 import cgitb # see next line
 cgitb.enable() # exception handler, displays uncaught errors
+import os.path
 import json
-import sys
 from urllib.request import urlopen # use to send/receive data
 from urllib.parse import urlencode # use to structure a GET string
 
@@ -91,7 +91,6 @@ if isinstance(Coordinates, list):
       Coordinates = ships["TotalCoords"]
       print("Invalid selection, select again")
 
-  
   elif len(Coordinates) == 10:
     with open('SaveCoords.txt', 'r') as f:
       ships = json.load(f)
@@ -110,13 +109,20 @@ if isinstance(Coordinates, list):
     Destroyer = separate(ships["TotalCoords"], Coordinates)
     if IsItValid(Destroyer) == True:
       with open('SaveCoords.txt', 'w') as f:
-        json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":ships["Cruiser"], "Destroyer":Destroyer, "submitted":Submit},f)
+        json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":ships["Cruiser"], "Destroyer":Destroyer, "submitted":Submit},f)
       print('All ships placed <br>')
     else:
       Coordinates = ships["TotalCoords"]
       print('Invalid Selection, select again')
   
   else:
+    if os.path.isfile('SaveCoords.txt'):
+      with open('SaveCoords.txt', 'r') as f:
+        ships = json.load(f)
+      if "TotalCoords" is in ships:
+        Coordinates = ships["TotalCoords"]
+      else:
+        Coordinates = []
     print('Invalid selection, select again ')
 
   print('<form action="/cgi-bin/web.py" method="POST">')
@@ -165,11 +171,6 @@ if isinstance(Coordinates, list):
 
 else: #dont do everything, repick coordinates with same html
   print('Invalid selection, select again <br>')
-  
-  # send nothing to txt file
-  data2send = {"Coordinates":" ", "submitted":" "}
-  with open('web.txt', 'w') as f:
-    json.dump(data2send,f)
   
   print('Place Ships <br>')
   print('<form action="/cgi-bin/web.py" method="POST">')
