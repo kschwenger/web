@@ -93,7 +93,7 @@ if isinstance(Coordinates, list):
     with open('SaveCoords.txt', 'r') as f:
       ships = json.load(f)
     #separate(ships["Battleship"], Submarine)
-    Submarine = [x for x in Coordinates if x not in ships["Battleship"]
+    Submarine = [x for x in Coordinates if x not in ships["Battleship"]]
     print(Coordinates)
     print(Submarine)
     if IsItValid(Submarine) == True:
