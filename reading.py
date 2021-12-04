@@ -42,6 +42,7 @@ def AreAllValid():  #check if all ships are valid
   IsItValid(Cruiser)
   IsItValid(Destroyer)  
 
+"""
 while True:
   # read txt file
   with open('web.txt', 'r') as f:
@@ -77,8 +78,16 @@ while True:
   # stop loop after all ships submitted
   if submissions > 3:
     break
-
+"""
 #sepall()
+
+with open('web.txt', 'r') as f:
+  ships = json.load(f)
+Battleship = ships["Battleship"]
+Submarine = ships["Submarine"]
+Cruiser = ships["Cruiser"]
+Destroyer = ships["Destroyer"]
+
 
 print("All ships placed")
 print("Battleship coordinates: ")
