@@ -116,7 +116,7 @@ if isinstance(Coordinates, list):
     Destroyer = separate(ships["TotalCoords"], Coordinates)
     if IsItValid(Destroyer) == True:
       with open('web.txt', 'w') as f:
-        json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":ships["Cruiser"], "Destroyer":Destroyer "submitted":Submit},f)
+        json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":ships["Cruiser"], "Destroyer":Destroyer, "submitted":Submit},f)
       print('All ships placed <br>')
     else:
       print('Invalid Selection, select again')
