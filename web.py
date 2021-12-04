@@ -88,6 +88,7 @@ if isinstance(Coordinates, list):
         json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":Submarine},f)
       print('Place Cruiser (3 coordinates) <br>')
     else:
+      Coordinates = Coordinates - Submarine
       print("Invalid selection, select again")
 
   
