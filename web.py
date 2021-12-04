@@ -90,7 +90,6 @@ if isinstance(Coordinates, list):
       print("Invalid selection, select again")
   
   elif len(Coordinates) == 7:
-    Submarine = [x for x in Coordinates if x not in Battleship]
     with open('SaveCoords.txt', 'r') as f:
       ships = json.load(f)
     #separate(ships["Battleship"], Submarine)
