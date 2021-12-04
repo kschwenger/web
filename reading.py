@@ -17,3 +17,6 @@ print("Cruiser coordinates: ")
 print(Cruiser)
 print("Destroyer coordinates: ")
 print(Destroyer)
+
+with open('SaveCoords.txt', 'w') as f:
+  json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Cruiser},f)

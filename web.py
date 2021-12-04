@@ -69,61 +69,67 @@ if isinstance(Coordinates, list):
 
   # html stuff
   print('<br>')
-  if len(Coordinates) == 4:
-    if IsItValid(Coordinates) == True:
-      with open('SaveCoords.txt', 'w') as f:
-        json.dump({"TotalCoords":Coordinates, "Battleship":Coordinates},f)
-      print('Place Submarine (3 coordinates) <br>')
-    else:
-      # dont save coordinates
-      Coordinates = []
-      print("Invalid selection, select again")
-  
-  elif len(Coordinates) == 7:
-    with open('SaveCoords.txt', 'r') as f:
-      ships = json.load(f)
-    Submarine = separate(ships["TotalCoords"], Coordinates)
-    if IsItValid(Submarine) == True:
-      with open('SaveCoords.txt', 'w') as f:
-        json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":Submarine},f)
-      print('Place Cruiser (3 coordinates) <br>')
-    else:
-      Coordinates = ships["TotalCoords"]
-      print("Invalid selection, select again")
 
-  elif len(Coordinates) == 10:
-    with open('SaveCoords.txt', 'r') as f:
-      ships = json.load(f)
-    Cruiser = separate(ships["TotalCoords"], Coordinates)
-    if IsItValid(Cruiser) == True:
-      with open('SaveCoords.txt', 'w') as f:
-        json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Cruiser},f)
-      print('Place Destroyer (2 coordinates) <br>')
-    else:
-      Coordinates = ships["TotalCoords"]
-      print('Invalid Selection, select again')
+  if len(Coordinates) > 3:
+
+    if len(Coordinates) == 4:
+      if IsItValid(Coordinates) == True:
+        with open('SaveCoords.txt', 'w') as f:
+          json.dump({"TotalCoords":Coordinates, "Battleship":Coordinates},f)
+        print('Place Submarine (3 coordinates) <br>')
+      else:
+        # dont save coordinates
+        Coordinates = []
+        print("Invalid selection, select again")
   
-  elif len(Coordinates) == 12:
-    with open('SaveCoords.txt', 'r') as f:
-      ships = json.load(f)
-    Destroyer = separate(ships["TotalCoords"], Coordinates)
-    if IsItValid(Destroyer) == True:
-      with open('SaveCoords.txt', 'w') as f:
-        json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":ships["Cruiser"], "Destroyer":Destroyer, "submitted":Submit},f)
-      print('All ships placed <br>')
-    else:
-      Coordinates = ships["TotalCoords"]
-      print('Invalid Selection, select again')
+    elif len(Coordinates) == 7:
+      with open('SaveCoords.txt', 'r') as f:
+        ships = json.load(f)
+      Submarine = separate(ships["TotalCoords"], Coordinates)
+      if IsItValid(Submarine) == True:
+        with open('SaveCoords.txt', 'w') as f:
+          json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":Submarine},f)
+        print('Place Cruiser (3 coordinates) <br>')
+      else:
+        Coordinates = ships["TotalCoords"]
+        print("Invalid selection, select again")
+
+    elif len(Coordinates) == 10:
+      with open('SaveCoords.txt', 'r') as f:
+        ships = json.load(f)
+      Cruiser = separate(ships["TotalCoords"], Coordinates)
+      if IsItValid(Cruiser) == True:
+        with open('SaveCoords.txt', 'w') as f:
+          json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Cruiser},f)
+        print('Place Destroyer (2 coordinates) <br>')
+      else:
+        Coordinates = ships["TotalCoords"]
+        print('Invalid Selection, select again')
   
-  else:
-    if os.path.isfile('SaveCoords.txt'):
+    elif len(Coordinates) == 12:
+      with open('SaveCoords.txt', 'r') as f:
+        ships = json.load(f)
+      Destroyer = separate(ships["TotalCoords"], Coordinates)
+      if IsItValid(Destroyer) == True:
+        with open('SaveCoords.txt', 'w') as f:
+          json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":ships["Cruiser"], "Destroyer":Destroyer, "submitted":Submit},f)
+        print('All ships placed <br>')
+      else:
+        Coordinates = ships["TotalCoords"]
+        print('Invalid Selection, select again')
+  
+    else:
+      #if os.path.isfile('SaveCoords.txt'):
       with open('SaveCoords.txt', 'r') as f:
         ships = json.load(f)
       if "TotalCoords" in ships:
         Coordinates = ships["TotalCoords"]
       else:
         Coordinates = []
-    print('Invalid selection, select again ')
+      print('Invalid selection, select again ')
+
+  else:
+    Coordinates = []
 
   print('<form action="/cgi-bin/web.py" method="POST">')
 
