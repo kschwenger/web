@@ -135,93 +135,48 @@ if isinstance(Coordinates, list):
     Coordinates = []
     print("Invalid selection.  Place Battleship (4 coordinates) <br>")
 
-  print('<form action="/cgi-bin/web.py" method="POST">')
-
-  for elem in AllCoords:
-    checking(elem)
-
-  print('<input type="submit" name="submitted" value="Submit">')
-  print('</form>')
-
-  # grid display
-  print("""
-  <head>
-  <style>
-  .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  aspect-ratio: 1;
-  height: 400px;
-  width: 400px;
-  }
-  .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-  }
-  </style>
-  </head>
-  <body>
-
-  <div class="grid-container">
-
-  """)
-
-  # update grid
-  for elem in AllCoords:
-    if Coordinates.count(elem) > 0:
-      print('<div class="grid-item">x</div>')
-    else:
-      print('<div class="grid-item"> </div>')
-    
-  print('</body>')
-
 else: #dont do everything, repick coordinates with same html
+  Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
-  
-  print('Place Ships <br>')
-  print('<form action="/cgi-bin/web.py" method="POST">')
 
-  for elem in AllCoords:
-    checking(elem)
+# checkbox form
+print('<form action="/cgi-bin/web.py" method="POST">')
+for elem in AllCoords:
+  checking(elem)
+print('<input type="submit" name="submitted" value="Submit">')
+print('</form>')
 
-  print('<input type="submit" name="submitted" value="Submit">')
-  print('</form>')
+# grid display
+print("""
+<head>
+<style>
+.grid-container {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+aspect-ratio: 1;
+height: 400px;
+width: 400px;
+}
+.grid-item {
+background-color: rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 15px;
+font-size: 20px;
+text-align: center;
+}
+</style>
+</head>
+<body>
 
-  # grid display
-  print("""
-  <head>
-  <style>
-  .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  aspect-ratio: 1;
-  height: 400px;
-  width: 400px;
-  }
-  .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-  }
-  </style>
-  </head>
-  <body>
-
-  <div class="grid-container">
-
-  """)
-
-  # update grid
-  for elem in AllCoords:
+<div class="grid-container">
+""")
+# update grid
+for elem in AllCoords:
+  if Coordinates.count(elem) > 0:
+    print('<div class="grid-item">x</div>')
+  else:
     print('<div class="grid-item"> </div>')
-    
-  print('</body>')
+print('</body>')
 
 print('</html>')
