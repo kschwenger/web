@@ -105,7 +105,7 @@ if isinstance(Coordinates, list):
       with open('SaveCoords.txt', 'w') as f:
         json.dump({"TotalCoords":Coordinates},f)
       with open('web.txt', 'w') as f:
-        json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Cruiser:, "submitted":Submit},f)
+        json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Cruiser, "submitted":Submit},f)
       print('Place Destroyer (2 coordinates) <br>')
     else:
       print('Invalid Selection, select again')
