@@ -101,6 +101,7 @@ if isinstance(Coordinates, list):
         json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Cruiser},f)
       print('Place Destroyer (2 coordinates) <br>')
     else:
+      Coordinates = ships["TotalCoords"]
       print('Invalid Selection, select again')
   
   elif len(Coordinates) == 12:
@@ -108,10 +109,11 @@ if isinstance(Coordinates, list):
       ships = json.load(f)
     Destroyer = separate(ships["TotalCoords"], Coordinates)
     if IsItValid(Destroyer) == True:
-      with open('web.txt', 'w') as f:
+      with open('SaveCoords.txt', 'w') as f:
         json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":ships["Cruiser"], "Destroyer":Destroyer, "submitted":Submit},f)
       print('All ships placed <br>')
     else:
+      Coordinates = ships["TotalCoords"]
       print('Invalid Selection, select again')
   
   else:

@@ -1,7 +1,7 @@
 import json
 from time import sleep
 
-with open('web.txt', 'r') as f:
+with open('SaveCoords.txt', 'r') as f:
   ships = json.load(f)
 Battleship = ships["Battleship"]
 Submarine = ships["Submarine"]
