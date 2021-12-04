@@ -3,7 +3,6 @@
 import cgi
 import cgitb # see next line
 cgitb.enable() # exception handler, displays uncaught errors
-import os.path
 import json
 from urllib.request import urlopen # use to send/receive data
 from urllib.parse import urlencode # use to structure a GET string
@@ -64,13 +63,9 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
-if isinstance(Coordinates, list):
-  #do everything
+if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
-  # html stuff
-  print('<br>')
-
-  if len(Coordinates) > 3:
+  if len(Coordinates) > 3: # if more than 3 boxes checked
 
     if len(Coordinates) == 4:
       if IsItValid(Coordinates) == True:
@@ -78,7 +73,6 @@ if isinstance(Coordinates, list):
           json.dump({"TotalCoords":Coordinates, "Battleship":Coordinates},f)
         print('Place Submarine (3 coordinates) <br>')
       else:
-        # dont save coordinates
         Coordinates = []
         print("Invalid selection.  Place Battleship (4 coordinates) <br>")
   
@@ -118,7 +112,7 @@ if isinstance(Coordinates, list):
         Coordinates = ships["TotalCoords"]
         print('Invalid selection. Place Destroyer (2 coordinates) <br>')
   
-    else:
+    else: # if Coordinates is not length 4, 7, 10, or 12
       with open('SaveCoords.txt', 'r') as f:
         ships = json.load(f)
       Coordinates = ships["TotalCoords"]
@@ -131,11 +125,11 @@ if isinstance(Coordinates, list):
       else:
         print('Invalid selection.  Place Battleship (4 coordinates) <br>')
 
-  else:
+  else: # if Coordinates is length 2 (2 total boxes checked)
     Coordinates = []
     print("Invalid selection.  Place Battleship (4 coordinates) <br>")
 
-else: #dont do everything, repick coordinates with same html
+else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
 
