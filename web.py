@@ -33,7 +33,7 @@ def checking(coord): # check each coord to see if already picked, display as che
 def IsItValid(ship):  # are they next to each other
   Valid = True
   for coordinate in range(len(ship)-1):
-    if ship[coordinate][0] == ship[coordinate+1][0]:
+    if ship[coordinate][0] == ship[len(ship)-1][0]:
       if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1:
         Valid = False
         break
@@ -130,6 +130,7 @@ if isinstance(Coordinates, list):
 
   else:
     Coordinates = []
+    print("Invalid selection, select again")
 
   print('<form action="/cgi-bin/web.py" method="POST">')
 
