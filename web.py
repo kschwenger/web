@@ -4,6 +4,7 @@ import cgi
 import cgitb # see next line
 cgitb.enable() # exception handler, displays uncaught errors
 import json
+import sys
 from urllib.request import urlopen # use to send/receive data
 from urllib.parse import urlencode # use to structure a GET string
 
@@ -78,7 +79,7 @@ if isinstance(Coordinates, list):
   # html stuff
   print('<br>')
   if len(Coordinates) == 4:
-    if IsItValid(Coordinates) == True
+    if IsItValid(Coordinates) == True:
       with open('SaveCoords.txt', 'w') as f:
         json.dump({"Battleship":Coordinates},f)
       with open('web.txt', 'w') as f:
@@ -91,7 +92,7 @@ if isinstance(Coordinates, list):
     with open('SaveCoords.txt', 'r') as f:
       ships = json.load(f)
     separate(ships["Battleship"], Coordinates)
-    if IsItValid(Coordinates) == True
+    if IsItValid(Coordinates) == True:
       with open('SaveCoords.txt', 'w') as f:
         json.dump({"Battleship":ships["Battleship"], "Submarine":Coordinates},f)
       with open('web.txt', 'w') as f:
@@ -106,7 +107,7 @@ if isinstance(Coordinates, list):
       ships = json.load(f)
     separate(ships["Battleship"], Coordinates)
     separate(ships["Submarine"], Coordinates)
-    if IsItValid(Coordinates) == True
+    if IsItValid(Coordinates) == True:
       with open('SaveCoords.txt', 'w') as f:
         json.dump({"Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Coordinates},f)
       with open('web.txt', 'w') as f:
