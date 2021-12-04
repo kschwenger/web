@@ -59,10 +59,6 @@ print('Content-type: text/html\n\n')
 print('<html>')
 print('<h1>BATTLESHIP</h1>')
 
-# how to save a ship selection if the selction (after the fist) is invalid (how to not clear whole board, just the new invalid selection)?
-# maybe send data only after correct number (4,7,10,12)
-# do some validating within the main code and send back? can it be validated in cgi without saving?
-
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
@@ -79,6 +75,8 @@ if isinstance(Coordinates, list):
         json.dump({"TotalCoords":Coordinates, "Battleship":Coordinates},f)
       print('Place Submarine (3 coordinates) <br>')
     else:
+      # dont save coordinates
+      Coordinates = []
       print("Invalid selection, select again")
   
   elif len(Coordinates) == 7:
