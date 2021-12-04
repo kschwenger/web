@@ -80,7 +80,7 @@ if isinstance(Coordinates, list):
       else:
         # dont save coordinates
         Coordinates = []
-        print("Invalid selection, select again")
+        print("Invalid selection.  Place Battleship (4 coordinates) <br>")
   
     elif len(Coordinates) == 7:
       with open('SaveCoords.txt', 'r') as f:
@@ -92,7 +92,7 @@ if isinstance(Coordinates, list):
         print('Place Cruiser (3 coordinates) <br>')
       else:
         Coordinates = ships["TotalCoords"]
-        print("Invalid selection, select again")
+        print("Invalid selection. Place Submarine (3 coordinates) <br>")
 
     elif len(Coordinates) == 10:
       with open('SaveCoords.txt', 'r') as f:
@@ -104,7 +104,7 @@ if isinstance(Coordinates, list):
         print('Place Destroyer (2 coordinates) <br>')
       else:
         Coordinates = ships["TotalCoords"]
-        print('Invalid Selection, select again')
+        print('Invalid selection. Place Cruiser (3 coordinates) <br>')
   
     elif len(Coordinates) == 12:
       with open('SaveCoords.txt', 'r') as f:
@@ -116,21 +116,24 @@ if isinstance(Coordinates, list):
         print('All ships placed <br>')
       else:
         Coordinates = ships["TotalCoords"]
-        print('Invalid Selection, select again')
+        print('Invalid selection. Place Destroyer (2 coordinates) <br>')
   
     else:
-      #if os.path.isfile('SaveCoords.txt'):
       with open('SaveCoords.txt', 'r') as f:
         ships = json.load(f)
-      if "TotalCoords" in ships:
-        Coordinates = ships["TotalCoords"]
+      Coordinates = ships["TotalCoords"]
+      if "Cruiser" in ships:
+        print('Invalid selection.  Place Destroyer (2 coordinates) <br>')
+      elif "Submarine" in ships:
+        print('Invalid selection.  Place Cruiser (3 coordinates) <br>')
+      elif "Battleship" in ships:
+        print('Invalid selection.  Place Submarine (3 coordinates) <br>')
       else:
-        Coordinates = []
-      print('Invalid selection, select again ')
+        print('Invalid selection.  Place Battleship (4 coordinates) <br>')
 
   else:
     Coordinates = []
-    print("Invalid selection, select again")
+    print("Invalid selection.  Place Battleship (4 coordinates) <br>")
 
   print('<form action="/cgi-bin/web.py" method="POST">')
 

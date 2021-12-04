@@ -19,4 +19,4 @@ print("Destroyer coordinates: ")
 print(Destroyer)
 
 with open('SaveCoords.txt', 'w') as f:
-  json.dump({"TotalCoords":" "},f)
+  json.dump({"TotalCoords":[]},f)
