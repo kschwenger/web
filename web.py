@@ -174,4 +174,3 @@ for elem in AllCoords:
 print('</body>')
 
 print('</html>')
-#12/4 4:25pm
