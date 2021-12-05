@@ -1,7 +1,7 @@
 import json
 from time import sleep
 
-while true:
+while True:
   with open('SaveCoords.txt', 'r') as f:
     ships = json.load(f)
   if "Battlship" in ships:
