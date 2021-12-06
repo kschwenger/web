@@ -167,6 +167,7 @@ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 400px;
 width: 400px;
+text-align: center;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
@@ -174,9 +175,6 @@ border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
 text-align: center;
-}
-.center {
- text-align: center
 }
 </style>
 </head>
