@@ -162,6 +162,7 @@ print('</form>')
 
 # grid display
 print("""
+<h3> My Ships </h3>
 <head>
 <style>
 .grid-container {
