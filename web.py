@@ -75,6 +75,8 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
+print('<h3 class="center">')
+
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
   if len(Coordinates) > 3: # if more than 3 boxes checked
@@ -145,6 +147,8 @@ if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes che
 else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
+
+print('</h3>')
 
 # checkbox form
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
