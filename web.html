@@ -1,14 +1,15 @@
 <html> 
+  
 <style>
-p {
- text-align:center
+.center {
+ text-align: center
 }
 </style>
-<p>
+
 <h1>BATTLESHIP</h1>
 <br>
 Place Battleship (4 coordinates) <br>
-<form action="/cgi-bin/web.py" method="POST">
+<form class ="center" action="/cgi-bin/web.py" method="POST">
   <input type="checkbox" name="option" value="A1">
   <input type="checkbox" name="option" value="A2"> 
   <input type="checkbox" name="option" value="A3">
@@ -83,5 +84,4 @@ Place Battleship (4 coordinates) <br>
   <br>
   <input type="submit" name="submitted" value="Submit">
 </form>
-</p>
 </html>
