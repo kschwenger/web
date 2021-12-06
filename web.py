@@ -57,7 +57,7 @@ def separate(old, new):     # remove any coordinate from new ship if it is in ol
 
 # html code
 print('Content-type: text/html\n\n')
-print('<html>')
+print('<html style="background-color:grey;">')
 print("""
 
 <style>
