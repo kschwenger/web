@@ -140,7 +140,7 @@ if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes che
       else:
         print('Invalid selection.  Place Battleship (4 coordinates) <br>')
 
-  else: # if Coordinates is length 2 (2 total boxes checked)
+  else: # if Coordinates is length 2 or 3 (2 or 3total boxes checked)
     Coordinates = []
     print("Invalid selection.  Place Battleship (4 coordinates) <br>")
 
@@ -170,8 +170,8 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
-height: 400px;
-width: 400px;
+height: 500px;
+width: 500px;
 text-align: center;
 }
 .grid-item {
