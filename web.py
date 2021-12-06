@@ -162,7 +162,7 @@ print('</form>')
 
 # grid display
 print("""
-<h4 class="center"> My Ships </h4>
+<h2 class="center"> My Ships </h2>
 <head>
 <style>
 .grid-container {
