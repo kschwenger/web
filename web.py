@@ -173,8 +173,6 @@ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 400px;
 width: 400px;
-text-align: center;
-justify-content: center;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
