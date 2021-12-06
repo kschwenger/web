@@ -60,6 +60,16 @@ print('Content-type: text/html\n\n')
 print('<html style="background-color:DodgerBlue;">')
 print("""
 
+<style>
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: OrangeRed;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+</style>
 <style type="text/css">
 .custom {
  font-family: Txt_IV50;
@@ -82,8 +92,6 @@ print("""
   width: 50%;
 }
 </style>
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71V3yp-gBE6dplD_jez4w5ll0-r97bT5R3g&usqp=CAU" alt="Battleship Logo" class="centimg">
 
 """)
 
