@@ -147,13 +147,13 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
 
 # checkbox form
-print('<form action="/cgi-bin/web.py" method="POST">')
+print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
   checking(elem)
 if Completed == True:
   pass
 else:
-  print('<input type="submit" name="submitted" value="Submit">')
+  print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 
 # grid display
@@ -174,6 +174,9 @@ border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
 text-align: center;
+}
+.center {
+ text-align: center
 }
 </style>
 </head>
