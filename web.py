@@ -167,6 +167,7 @@ print("""
 <style>
 .grid-container {
 display: grid;
+margin: auto;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
