@@ -198,7 +198,7 @@ text-align: center;
 # update grid
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
-    print('<div class="grid-item"> <span class="dot"></span> </div>')
+    print('<div class="grid-item"> <span class="dot"> O </span> </div>')
   else:
     print('<div class="grid-item"> </div>')
 print('</body>')
