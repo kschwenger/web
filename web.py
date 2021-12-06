@@ -57,7 +57,7 @@ def separate(old, new):     # remove any coordinate from new ship if it is in ol
 
 # html code
 print('Content-type: text/html\n\n')
-print('<html style="background-color:LightSteelBlue;">')
+print('<html style="background-color:DodgerBlue;">')
 print("""
 
 <style>
@@ -162,7 +162,7 @@ print('</form>')
 
 # grid display
 print("""
-<h3 class="center"> My Ships </h3>
+<h4 class="center"> My Ships </h4>
 <head>
 <style>
 .grid-container {
