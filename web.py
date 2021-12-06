@@ -64,7 +64,7 @@ print("""
 .dot {
   height: 25px;
   width: 25px;
-  background-color: OrangeRed;
+  background-color: Red;
   border-radius: 50%;
   display: inline-block;
 }
