@@ -167,7 +167,6 @@ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 400px;
 width: 400px;
-text-align: center;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
@@ -180,14 +179,14 @@ text-align: center;
 </head>
 <body>
 
-<div class="grid-container center">
+<div class="grid-container">
 """)
 # update grid
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
-    print('<div class="grid-item center">x</div>')
+    print('<div class="grid-item">x</div>')
   else:
-    print('<div class="grid-item center"> </div>')
+    print('<div class="grid-item"> </div>')
 print('</body>')
 
 print('</html>')
