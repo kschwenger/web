@@ -173,6 +173,7 @@ aspect-ratio: 1;
 height: 500px;
 width: 500px;
 text-align: center;
+align-content: center;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
