@@ -56,16 +56,20 @@ def separate(old, new):     # remove any coordinate from new ship if it is in ol
   return ship
 
 # html code
+print('Content-type: text/html\n\n')
+print('<html>')
 print("""
-Content-type: text/html\n\n
-<html>
+
 <style>
 .center {
  text-align: center
 }
 </style>
-<h1 class="center">BATTLESHIP</h1>
+
 """)
+
+print('<h1 class="center">BATTLESHIP</h1>')
+
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
