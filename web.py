@@ -60,6 +60,14 @@ print('Content-type: text/html\n\n')
 print('<html style="background-color:DodgerBlue;">')
 print("""
 
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: OrangeRed;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 <style>
 .center {
  text-align: center
@@ -190,7 +198,7 @@ text-align: center;
 # update grid
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
-    print('<div class="grid-item">x</div>')
+    print('<div class="grid-item"> <span class="dot"></span> </div>')
   else:
     print('<div class="grid-item"> </div>')
 print('</body>')
