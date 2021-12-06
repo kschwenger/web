@@ -74,6 +74,11 @@ print("""
 }
 </style>
 
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
 """)
 
 print('<h1 class="center">BATTLESHIP</h1>')
@@ -198,7 +203,7 @@ text-align: center;
 # update grid
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
-    print('<div class="grid-item"> <span class="dot"> O </span> </div>')
+    print('<div class="grid-item"> x </div>')
   else:
     print('<div class="grid-item"> </div>')
 print('</body>')
