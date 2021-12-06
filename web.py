@@ -180,14 +180,14 @@ text-align: center;
 </head>
 <body>
 
-<div class="grid-container">
+<div class="grid-container center">
 """)
 # update grid
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
-    print('<div class="grid-item">x</div>')
+    print('<div class="grid-item center">x</div>')
   else:
-    print('<div class="grid-item"> </div>')
+    print('<div class="grid-item center"> </div>')
 print('</body>')
 
 print('</html>')
