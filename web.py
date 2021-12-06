@@ -62,15 +62,7 @@ print("""
 
 <style>
 .center {
-  text-align: center
-}
-</style>
-
-<style>
-.square{
-  width: 50px;
-  height: 50px;
-  background-color: blue;
+ text-align: center
 }
 </style>
 
@@ -200,7 +192,7 @@ for elem in AllCoords:
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item">x</div>')
   else:
-    print('<div class="grid-item square"> </div>')
+    print('<div class="grid-item"> </div>')
 print('</body>')
 
 print('</html>')
