@@ -181,8 +181,8 @@ margin: auto;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
-height: 400px;
-width: 400px;
+height: 450px;
+width: 450px;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
