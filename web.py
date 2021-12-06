@@ -170,10 +170,10 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
-height: 500px;
-width: 500px;
+height: 400px;
+width: 400px;
 text-align: center;
-align-content: center;
+justify-content: center;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
