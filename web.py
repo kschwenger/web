@@ -196,13 +196,13 @@ print('</h3>')
 
 
 # checkbox form
-print('<form class="lefter" action="/cgi-bin/web.py" method="POST">')
+print('<form action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
   checking(elem)
 if Completed == True:
   pass
 else:
-  print('<input class="center" type="submit" name="submitted" value="Submit">')
+  print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</div>')
 
