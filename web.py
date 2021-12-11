@@ -86,7 +86,7 @@ print("""
 }
 </style>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71V3yp-gBE6dplD_jez4w5ll0-r97bT5R3g&usqp=CAU" alt="Battleship Logo" class="centimg">
+<img src="https://static.wikia.nocookie.net/logopedia/images/8/8c/4e173fe993fef3933e455d4a2fa85d66.png/revision/latest?cb=20180225015935" alt="Battleship Logo" class="centimg">
 """)
 
 # get data from html form
