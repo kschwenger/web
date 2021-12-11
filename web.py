@@ -206,6 +206,7 @@ else:
 print('</form>')
 print('</div>')
 
+print('<div style="float: left;">')
 # grid display
 print("""
 <h2 class="righter"> My Ships </h2>
