@@ -84,6 +84,15 @@ print("""
 }
 </style>
 
+<style>
+.centimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71V3yp-gBE6dplD_jez4w5ll0-r97bT5R3g&usqp=CAU" alt="Battleship Logo" class="centimg">
 """)
 
