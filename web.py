@@ -214,7 +214,6 @@ print("""
 <style>
 .grid-container {
 display: grid;
-left: 600px;
 margin: 10px;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
