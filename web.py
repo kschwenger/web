@@ -202,14 +202,14 @@ for elem in AllCoords:
 if Completed == True:
   pass
 else:
-  print('<input class="center" type="submit" name="submitted" value="Submit">')
+  print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</div>')
 
 print('<div style="float: left;">')
 # grid display
 print("""
-<h2 class="righter"> My Ships </h2>
+<h2> My Ships </h2>
 <head>
 <style>
 .grid-container {
