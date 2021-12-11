@@ -103,7 +103,7 @@ print("""
 <style>
 .righter {
   position: relative;
-  right: 200px;
+  right: 10px;
 }
 </style>
 
