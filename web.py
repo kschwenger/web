@@ -193,7 +193,7 @@ print('</div>')
 print('<div style="float:left; background:white; margin-left:200px;">')
 # grid display
 print("""
-<h2> My Ships </h2>
+<h2 class="center"> My Ships </h2>
 <head>
 <style>
 .grid-container {
