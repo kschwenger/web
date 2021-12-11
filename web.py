@@ -82,8 +82,8 @@ print("""
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:500px;
-  height:600px;
+  width:800px;
+  height:200px;
 }
 </style>
 
