@@ -202,7 +202,7 @@ for elem in AllCoords:
 if Completed == True:
   pass
 else:
-  print('<input type="submit" name="submitted" value="Submit">')
+  print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</div>')
 
@@ -215,7 +215,7 @@ print("""
 .grid-container {
 display: grid;
 margin: 10px;
-margin-left: 200px;
+
 float: left;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
