@@ -83,7 +83,7 @@ print("""
   margin-left: auto;
   margin-right: auto;
   width:800px;
-  height:200px;
+  height:400px;
 }
 </style>
 
