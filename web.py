@@ -55,10 +55,30 @@ def separate(old, new):     # remove any coordinate from new ship if it is in ol
   ship = [x for x in new if x not in old]
   return ship
 
-# html code
+# html content type and style classes
 print('Content-type: text/html\n\n')
 print('<html style="background-color:DodgerBlue;">')
 print("""
+
+<style>
+.grid-container {
+display: grid;
+margin: 10px;
+float: left;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+aspect-ratio: 1;
+height: 450px;
+width: 450px;
+}
+.grid-item {
+background-color: rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 15px;
+font-size: 20px;
+text-align: center;
+}
+</style>
 
 <style>
 .dot {
@@ -95,6 +115,7 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
+# div 1 for checkbox form
 print('<div style="float:left; margin:10px; margin-top:100px; margin-left:475px;">')
 print('<h2>')
 
@@ -182,40 +203,16 @@ else:
 print('</form>')
 print('</div>')
 
+# div 2 for grid display
 print('<div style="float:left; margin:10px; margin-left:200px;">')
-
-# grid display
-print("""
-<h2 class="center"> My Ships </h2>
-<style>
-.grid-container {
-display: grid;
-margin: 10px;
-float: left;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-aspect-ratio: 1;
-height: 450px;
-width: 450px;
-}
-.grid-item {
-background-color: rgba(255, 255, 255, 0.8);
-border: 1px solid rgba(0, 0, 0, 0.8);
-padding: 15px;
-font-size: 20px;
-text-align: center;
-}
-</style>
-
-<div class="grid-container">
-""")
-# update grid
+print('<h2 class="center"> My Ships </h2>')
+# update grid display
+print('<div class="grid-container">')
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
   else:
     print('<div class="grid-item"> </div>')
-
 print('</div>')
 
 print('</html>')
