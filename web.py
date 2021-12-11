@@ -70,13 +70,6 @@ print("""
 }
 
 </style>
-<style type="text/css">
-.custom {
- font-family: Txt_IV50;
- color: black;
- text-align: center
-}
-</style>
 
 <style>
 .center {
@@ -176,7 +169,7 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
 
-print('</h3>')
+print('</h2>')
 
 
 # checkbox form
@@ -190,7 +183,7 @@ else:
 print('</form>')
 print('</div>')
 
-print('<div style="float:left; background:white; margin-left:200px;">')
+print('<div style="float:left; background:white; margin:10px; margin-left:200px;">')
 # grid display
 print("""
 <h2 class="center"> My Ships </h2>
