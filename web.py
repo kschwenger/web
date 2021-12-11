@@ -94,20 +94,6 @@ print("""
 </style>
 
 <style>
-.lefter {
-
-  position: relative;
-  left: 200px;
-}
-</style>
-
-<style>
-.righter {
-
-  position: relative;
-  left: 600px;
-}
-</style>
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71V3yp-gBE6dplD_jez4w5ll0-r97bT5R3g&usqp=CAU" alt="Battleship Logo" class="centimg">
 """)
@@ -119,7 +105,7 @@ Submit = dataFromhtml.getvalue('submitted')
 
 print('<div style="float:left; margin:10px; margin-left:400px;">')
 
-print('<h3>')
+print('<h3 class="center">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
@@ -209,7 +195,7 @@ print('</div>')
 print('<div style="float:left; margin-left:200px;">')
 # grid display
 print("""
-<h2> My Ships </h2>
+<h2 class="center"> My Ships </h2>
 <head>
 <style>
 .grid-container {
