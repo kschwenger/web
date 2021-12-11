@@ -103,7 +103,7 @@ print("""
 <style>
 .righter {
   position: relative;
-  left: 2000px;
+  right: 200px;
 }
 </style>
 
@@ -202,14 +202,14 @@ print('</form>')
 
 # grid display
 print("""
-<h2 class="center"> My Ships </h2>
+<h2 class="righter"> My Ships </h2>
 <head>
 <style>
 .grid-container {
 display: grid;
 position: relative;
 right: 200px;
-margin: auto;
+
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
