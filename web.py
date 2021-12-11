@@ -205,7 +205,8 @@ print('</div>')
 
 # div 2 for grid display
 print('<div style="float:left; margin:10px; margin-left:200px;">')
-print('<h2 class="center"> My Ships </h2>')
+print('<h2 class="center"> My Ships <br>'
+print(<'1 2 3 4 5 6 7 8 </h2>')
 # update grid display
 print('<div class="grid-container">')
 for elem in AllCoords:
