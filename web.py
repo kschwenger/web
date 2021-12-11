@@ -103,7 +103,7 @@ Submit = dataFromhtml.getvalue('submitted')
 
 print('<div style="float:left; background:gray; margin:10px; margin-left:475px;">')
 
-print('<h4>')
+print('<h2>')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
