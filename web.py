@@ -215,6 +215,7 @@ print("""
 .grid-container {
 display: grid;
 margin: 10px;
+float: left;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
