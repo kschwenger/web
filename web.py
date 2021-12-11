@@ -103,6 +103,7 @@ print("""
 
 <style>
 .righter {
+  float: left;
   position: relative;
   left: 600px;
 }
@@ -212,7 +213,7 @@ print("""
 display: grid;
 position: relative;
 left: 600px;
-
+float: left;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
