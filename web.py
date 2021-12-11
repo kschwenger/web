@@ -95,7 +95,7 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
-print('<div style="float:left; background:gray; margin:10px; margin-left:475px;">')
+print('<div style="float:left; background:gray; margin:10px; margin-top:200px; margin-left:475px;">')
 
 print('<h2>')
 
