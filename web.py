@@ -103,7 +103,7 @@ print("""
 <style>
 .righter {
   position: relative;
-  left: 2000px;
+  left: 600px;
 }
 </style>
 
@@ -208,8 +208,8 @@ print("""
 .grid-container {
 display: grid;
 position: relative;
-right: 200px;
-margin: auto;
+left: 600px;
+
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
