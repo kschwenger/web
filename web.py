@@ -95,7 +95,7 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
-print('<div style="float:left; background:gray; margin:10px; margin-top:150px; margin-left:475px;">')
+print('<div style="float:left; margin:10px; margin-top:150px; margin-left:475px;">')
 
 print('<h2>')
 
@@ -184,7 +184,7 @@ else:
 print('</form>')
 print('</div>')
 
-print('<div style="float:left; background:white; margin:10px; margin-left:200px;">')
+print('<div style="float:left; margin:10px; margin-left:200px;">')
 # grid display
 print("""
 <h2 class="center"> My Ships </h2>
