@@ -96,16 +96,14 @@ print("""
 <style>
 .lefter {
   float: left;
-  position: relative;
-  left: 200px;
+
 }
 </style>
 
 <style>
 .righter {
   float: left;
-  position: relative;
-  left: 600px;
+
 }
 </style>
 
@@ -211,9 +209,10 @@ print("""
 <style>
 .grid-container {
 display: grid;
-position: relative;
-left: 600px;
 float: left;
+
+left: 600px;
+marin: 10px;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
