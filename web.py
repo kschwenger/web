@@ -95,8 +95,7 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
-print('<div style="float:left; margin:10px; margin-top:150px; margin-left:475px;">')
-
+print('<div style="float:left; margin:10px; margin-top:100px; margin-left:475px;">')
 print('<h2>')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
@@ -172,7 +171,6 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
 
 print('</h2>')
 
-
 # checkbox form
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
@@ -185,15 +183,14 @@ print('</form>')
 print('</div>')
 
 print('<div style="float:left; margin:10px; margin-left:200px;">')
+
 # grid display
 print("""
 <h2 class="center"> My Ships </h2>
-<head>
 <style>
 .grid-container {
 display: grid;
 margin: 10px;
-
 float: left;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -209,7 +206,6 @@ font-size: 20px;
 text-align: center;
 }
 </style>
-</head>
 <body>
 
 <div class="grid-container">
