@@ -93,6 +93,20 @@ print("""
 }
 </style>
 
+<style>
+.lefter {
+  position: relative;
+  left: 200px;
+}
+</style>
+
+<style>
+.righter {
+  position: relative;
+  left: 2000px;
+}
+</style>
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71V3yp-gBE6dplD_jez4w5ll0-r97bT5R3g&usqp=CAU" alt="Battleship Logo" class="centimg">
 """)
 
@@ -101,7 +115,7 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
-print('<h3 class="center">')
+print('<h3 class="lefter">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
@@ -177,13 +191,13 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
 print('</h3>')
 
 # checkbox form
-print('<form class="center" action="/cgi-bin/web.py" method="POST">')
+print('<form class="lefter" action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
   checking(elem)
 if Completed == True:
   pass
 else:
-  print('<input class="center" type="submit" name="submitted" value="Submit">')
+  print('<input class="lefter" type="submit" name="submitted" value="Submit">')
 print('</form>')
 
 # grid display
