@@ -65,7 +65,7 @@ print("""
 display: grid;
 float: left;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 450px;
 width: 450px;
@@ -205,9 +205,10 @@ print('</div>')
 # div 2 for grid display
 print('<div style="float:left; margin:10px; margin-left:200px;">')
 print('<h2 class="center"> My Ships <br> </h2>')
-#print('<h1 class="center"> 1 2 3 4 5 6 7 8 </h1>')
 # update grid display
 print('<div class="grid-container">')
+for i in range(8):
+  print('<div class="grid-item"> i </div>')
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
