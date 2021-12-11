@@ -95,6 +95,7 @@ print("""
 
 <style>
 .lefter {
+  float: left;
   position: relative;
   left: 200px;
 }
@@ -190,6 +191,7 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
 
 print('</h3>')
 
+print('<div class ="lefter"')
 # checkbox form
 print('<form class="lefter" action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
@@ -199,6 +201,7 @@ if Completed == True:
 else:
   print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
+print('</div>')
 
 # grid display
 print("""
