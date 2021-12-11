@@ -63,7 +63,6 @@ print("""
 <style>
 .grid-container {
 display: grid;
-margin: 10px;
 float: left;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -117,7 +116,7 @@ Submit = dataFromhtml.getvalue('submitted')
 
 # div 1 for checkbox form
 print('<div style="float:left; margin:10px; margin-top:100px; margin-left:475px;">')
-print('<h2>')
+print('<h2 class="center">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
@@ -205,8 +204,8 @@ print('</div>')
 
 # div 2 for grid display
 print('<div style="float:left; margin:10px; margin-left:200px;">')
-print('<h2 class="center"> My Ships <br>')
-print('<1 2 3 4 5 6 7 8 </h2>')
+print('<h2 class="center"> My Ships <br> </h2>')
+print('<h1 class="center"> 1   2   3   4   5   6   7   8 </h1>')
 # update grid display
 print('<div class="grid-container">')
 for elem in AllCoords:
