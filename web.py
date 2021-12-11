@@ -180,7 +180,7 @@ print('</h3>')
 
 
 # checkbox form
-print('<form action="/cgi-bin/web.py" method="POST">')
+print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
   checking(elem)
 if Completed == True:
