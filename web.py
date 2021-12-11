@@ -206,7 +206,6 @@ font-size: 20px;
 text-align: center;
 }
 </style>
-<body>
 
 <div class="grid-container">
 """)
@@ -216,7 +215,6 @@ for elem in AllCoords:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
   else:
     print('<div class="grid-item"> </div>')
-print('</body>')
 
 print('</div>')
 
