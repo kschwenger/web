@@ -119,7 +119,7 @@ Submit = dataFromhtml.getvalue('submitted')
 
 print('<div style="float: left;">')
 
-print('<h3 class="lefter">')
+print('<h3>')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
@@ -202,7 +202,7 @@ for elem in AllCoords:
 if Completed == True:
   pass
 else:
-  print('<input type="submit" name="submitted" value="Submit">')
+  print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</div>')
 
