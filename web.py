@@ -186,10 +186,9 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
 
-print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 print('</h2>')
-
-print('<h3>')
+print('<form class="center" action="/cgi-bin/web.py" method="POST">')
+print('<h3 class="center">')
 # update grid display
 print('<div class="grid-container">')
 print('<div class="grid-itemBlank"> </div>')
@@ -219,6 +218,6 @@ if Completed == True:
   pass
 else:
   print('<input type="submit" name="submitted" value="Submit">')
-  print('</h3>')
+print('</h3>')
 print('</form>')
 print('</html>') #close html page
