@@ -194,7 +194,7 @@ print('<div class="grid-container">')
 print('<div class="grid-itemEmpt"> </div>')
 for i in range(8):
   print('<div class="grid-itemEmpt"> %s </div>' %str(i+1))
-print('<div class="grid-item"> A </div>')
+print('<div class="grid-itemEmpt"> A </div>')
 counter = 0
 rowletter = 1
 for elem in AllCoords:
