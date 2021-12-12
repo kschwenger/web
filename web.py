@@ -59,7 +59,7 @@ def separate(old, new):     # remove any coordinate from new ship if it is in ol
 print('Content-type: text/html\n\n')
 print('<html style="background-color:DodgerBlue;">')
 print("""
-
+<head>
 <style>
 .grid-container {
 display: grid;
@@ -103,10 +103,15 @@ text-align: center;
   width:600px;
   height:300px;
 }
+body {
+  background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
 </style>
-
-<img src="https://w7.pngwing.com/pngs/712/612/png-transparent-battleship-board-game-the-game-of-life-logo-game-logo-miscellaneous-game-text.png" alt="Battleship Logo" class="centimg">
-
+</head>
+<body>
 """)
 
 # get data from html form
@@ -218,4 +223,5 @@ else:
   
 print('</form>')
 print('</h3>')
+print('</body>')
 print('</html>') #close html page
