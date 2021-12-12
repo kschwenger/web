@@ -102,17 +102,15 @@ text-align: center;
   width:600px;
   height:300px;
 }
-body {
-  background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
-}
 </style>
+
+<img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
 """)
 
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
-print('<body>')
 
 print('<h2 class="center">')
 
@@ -217,7 +215,5 @@ else:
   print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</h3>')
-
-print('</body>')
 
 print('</html>') #close html page
