@@ -72,7 +72,7 @@ margin-left: auto;
 margin-right: auto;
 }
 .grid-itemFill {
-background-color: Red;
+background-color: RedOrange;
 border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
@@ -121,6 +121,7 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 Submit = dataFromhtml.getvalue('submitted')
 
 print('<body>')
+print('<div style="margin-top: 100px;">')
 print('<h2 class="center">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
@@ -221,8 +222,9 @@ for elem in AllCoords:
 if Completed == True:
   pass
 else:
-  print('<input class="center" type="submit" name="submitted" value="Submit">')
+  print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</h3>')
+print('<div>')
 print('</body>')
 print('</html>') #close html page
