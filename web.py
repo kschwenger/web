@@ -211,7 +211,13 @@ for elem in AllCoords:
     if rowletter < 8:
       print('<div class="grid-itemBlank"> %s </div>' %list(Rowdict.keys())[rowletter])
       rowletter += 1
-print('</div>')
+print("""
+</div>
+<br>
+<br>
+<br>
+""")
+
 if Completed == True:
   pass
 else:
