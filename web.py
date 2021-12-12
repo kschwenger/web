@@ -57,7 +57,7 @@ def separate(old, new):     # remove any coordinate from new ship if it is in ol
 
 # html content type and style classes
 print('Content-type: text/html\n\n')
-print('<html style="background-color:DodgerBlue;">')
+print('<html>')
 print("""
 <head>
 <style>
@@ -103,6 +103,12 @@ text-align: center;
   width:600px;
   height:300px;
 }
+body {
+  background-image: url('https://images.theconversation.com/files/295442/original/file-20191003-52796-1763ajl.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 </style>
 </head>
 <img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
@@ -112,7 +118,7 @@ text-align: center;
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
-
+print('<body>')
 print('<h2 style="text-align:center;">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
@@ -218,6 +224,6 @@ else:
   print('<input type="submit" name="submitted" value="Submit">')
 print('</h3>')
 print('</form>')
+print('</body>')
 print('</html>') #close html page 
-
 #12/12/2021 12:09AM
