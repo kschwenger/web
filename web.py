@@ -105,7 +105,7 @@ text-align: center;
 }
 </style>
 
-<img src="https://static.wikia.nocookie.net/logopedia/images/8/8c/4e173fe993fef3933e455d4a2fa85d66.png/revision/latest?cb=20180225015935" alt="Battleship Logo" class="centimg">
+<img src="https://w7.pngwing.com/pngs/712/612/png-transparent-battleship-board-game-the-game-of-life-logo-game-logo-miscellaneous-game-text.png" alt="Battleship Logo" class="centimg">
 
 """)
 
