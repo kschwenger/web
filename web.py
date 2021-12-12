@@ -104,7 +104,7 @@ text-align: center;
 }
 </style>
 
-<img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ultraboardgames.com%2Fbattleship%2Feditions.php&psig=AOvVaw3EteVdqOBFeMn5HmPrkScb&ust=1639349988755000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMi0s-Ls3PQCFQAAAAAdAAAAABA2" alt="Battleship Logo" class="centimg">
 """)
 
 # get data from html form
