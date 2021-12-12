@@ -121,7 +121,7 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 Submit = dataFromhtml.getvalue('submitted')
 
 print('<body>')
-print('<h2 style="text-align:center; margin-top:200px;>')
+print('<h2 style="text-align:center;">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
