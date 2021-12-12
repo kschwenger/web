@@ -211,6 +211,7 @@ for elem in AllCoords:
       print('<div class="grid-itemBlank"> %s </div>' %list(Rowdict.keys())[rowletter])
       rowletter += 1
 print("""
+</h3>
 </div>
 <br>
 <br>
@@ -221,8 +222,6 @@ if Completed == True:
   pass
 else:
   print('<input type="submit" name="submitted" value="Submit">')
-  
 print('</form>')
-print('</h3>')
 print('</body>')
 print('</html>') #close html page
