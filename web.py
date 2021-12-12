@@ -105,7 +105,7 @@ text-align: center;
 }
 </style>
 
-<img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
+<img src="https://static.wikia.nocookie.net/logopedia/images/8/8c/4e173fe993fef3933e455d4a2fa85d66.png/revision/latest?cb=20180225015935" alt="Battleship Logo" class="centimg">
 
 """)
 
