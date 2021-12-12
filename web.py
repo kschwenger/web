@@ -228,4 +228,4 @@ for elem in AllCoords:
 print('</div>')
 print('</h3>')
 
-print('</html>')
+print('</html>') #close html page
