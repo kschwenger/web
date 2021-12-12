@@ -105,8 +105,7 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
-print('<div style="center">')
-print('<h2>')
+print('<h2 class="center">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
@@ -207,8 +206,6 @@ if Completed == True:
 else:
   print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
-
-print('</div>')
 print('</h3>')
 
 print('</html>') #close html page
