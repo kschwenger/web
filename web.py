@@ -104,7 +104,15 @@ text-align: center;
 }
 </style>
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ultraboardgames.com%2Fbattleship%2Feditions.php&psig=AOvVaw3EteVdqOBFeMn5HmPrkScb&ust=1639349988755000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMi0s-Ls3PQCFQAAAAAdAAAAABA2" alt="Battleship Logo" class="centimg">
+<style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
 """)
 
 # get data from html form
@@ -112,6 +120,7 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
+print('<body>')
 print('<h2 class="center">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
@@ -215,5 +224,5 @@ else:
   print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</h3>')
-
+print('</body>')
 print('</html>') #close html page
