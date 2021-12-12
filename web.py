@@ -222,7 +222,7 @@ for elem in AllCoords:
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item"> <input type="checkbox" name="option" value="%s" checked> </span> </div>' %elem)
   else:
-    print('<div class="grid-item"> </div>')
+    print('<div class="grid-item"> <input type="checkbox" name="option" value="%s"> </div>' %elem)
   counter += 1
   if counter >= 8:
     counter = 0
