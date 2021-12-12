@@ -123,10 +123,10 @@ if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes che
       if IsItValid(Coordinates) == True:
         with open('SaveCoords.txt', 'w') as f:
           json.dump({"TotalCoords":Coordinates, "Battleship":Coordinates},f)
-        print('Place Submarine (3 coordinates) <br>')
+        print('Place <span style="color:OrangeRed"> Submarine </span> (3 coordinates) <br>')
       else:
         Coordinates = []
-        print("Invalid selection.  Place Battleship (4 coordinates next to each other in a single row or column) <br>")
+        print("Invalid selection.  Place <span style="color:OrangeRed"> Battleship </span> (4 coordinates next to each other in a single row or column) <br>")
   
     elif len(Coordinates) == 7:
       with open('SaveCoords.txt', 'r') as f:
@@ -135,10 +135,10 @@ if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes che
       if IsItValid(Submarine) == True:
         with open('SaveCoords.txt', 'w') as f:
           json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":Submarine},f)
-        print('Place Cruiser (3 coordinates) <br>')
+        print('Place <span style="color:OrangeRed"> Cruiser </span> (3 coordinates) <br>')
       else:
         Coordinates = ships["TotalCoords"]
-        print("Invalid selection. Place Submarine (3 coordinates next to each other in a single row or column) <br>")
+        print("Invalid selection. Place <span style="color:OrangeRed"> Submarine </span> (3 coordinates next to each other in a single row or column) <br>")
 
     elif len(Coordinates) == 10:
       with open('SaveCoords.txt', 'r') as f:
@@ -147,10 +147,10 @@ if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes che
       if IsItValid(Cruiser) == True:
         with open('SaveCoords.txt', 'w') as f:
           json.dump({"TotalCoords":Coordinates, "Battleship":ships["Battleship"], "Submarine":ships["Submarine"], "Cruiser":Cruiser},f)
-        print('Place Destroyer (2 coordinates) <br>')
+        print('Place <span style="color:OrangeRed"> Destroyer </span> (2 coordinates) <br>')
       else:
         Coordinates = ships["TotalCoords"]
-        print('Invalid selection. Place Cruiser (3 coordinates next to each other in a single row or column) <br>')
+        print('Invalid selection. Place <span style="color:OrangeRed"> Cruiser </span> (3 coordinates next to each other in a single row or column) <br>')
   
     elif len(Coordinates) == 12:
       with open('SaveCoords.txt', 'r') as f:
@@ -163,28 +163,28 @@ if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes che
         Completed = True
       else:
         Coordinates = ships["TotalCoords"]
-        print('Invalid selection. Place Destroyer (2 coordinates next to each other in a single row or column) <br>')
+        print('Invalid selection. Place <span style="color:OrangeRed"> Destroyer </span> (2 coordinates next to each other in a single row or column) <br>')
   
     else: # if Coordinates is not length 4, 7, 10, or 12
       with open('SaveCoords.txt', 'r') as f:
         ships = json.load(f)
       Coordinates = ships["TotalCoords"]
       if "Cruiser" in ships:
-        print('Invalid selection.  Place Destroyer (2 coordinates next to each other in a single row or column) <br>')
+        print('Invalid selection.  Place <span style="color:OrangeRed"> Destroyer </span> (2 coordinates next to each other in a single row or column) <br>')
       elif "Submarine" in ships:
-        print('Invalid selection.  Place Cruiser (3 coordinates next to each other in a single row or column) <br>')
+        print('Invalid selection.  Place <span style="color:OrangeRed"> Cruiser </span> (3 coordinates next to each other in a single row or column) <br>')
       elif "Battleship" in ships:
-        print('Invalid selection.  Place Submarine (3 coordinates next to each other in a single row or column) <br>')
+        print('Invalid selection.  Place <span style="color:OrangeRed"> Submarine </span> (3 coordinates next to each other in a single row or column) <br>')
       else:
-        print('Invalid selection.  Place Battleship (4 coordinates next to each other in a single row or column) <br>')
+        print('Invalid selection.  Place <span style="color:OrangeRed"> Battleship </span> (4 coordinates next to each other in a single row or column) <br>')
 
   else: # if Coordinates is length 2 or 3 (2 or 3total boxes checked)
     Coordinates = []
-    print("Invalid selection.  Place Battleship (4 coordinates next to each other in a single row or column) <br>")
+    print("Invalid selection.  Place <span style="color:OrangeRed"> Battleship </span> (4 coordinates next to each other in a single row or column) <br>")
 
 else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
-  print('Invalid selection, Place Battleship (4 coordinates next to each other in a single row or column) <br>')
+  print('Invalid selection, Place <span style="color:OrangeRed"> Battleship </span> (4 coordinates next to each other in a single row or column) <br>')
 
 print('</h2>')
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
