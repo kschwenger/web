@@ -72,7 +72,7 @@ margin-left: auto;
 margin-right: auto;
 }
 .grid-itemFill {
-background-color: RedOrange;
+background-color: OrangeRed;
 border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
@@ -109,7 +109,7 @@ body {
   background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 </style>
 
@@ -225,6 +225,6 @@ else:
   print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</h3>')
-print('<div>')
+print('</div>')
 print('</body>')
 print('</html>') #close html page
