@@ -207,6 +207,7 @@ print('<div style="float:left; margin:10px; margin-left:200px;">')
 print('<h2 class="center"> My Ships <br> </h2>')
 # update grid display
 print('<div class="grid-container">')
+print('<div class="grid-item"> </div>')
 for i in range(8):
   print('<div class="grid-item"> %s </div>' %str(i+1))
 print('<div class="grid-item"> A </div>')
