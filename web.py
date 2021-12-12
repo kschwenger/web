@@ -211,7 +211,7 @@ for i in range(8):
   print('<div class="grid-item"> %s </div>' %str(i+1))
 counter = 0
 for elem in AllCoords:
-  print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[counter]
+  print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[counter])
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
   else:
