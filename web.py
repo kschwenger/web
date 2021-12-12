@@ -70,7 +70,14 @@ height: 450px;
 width: 450px;
 margin: auto;
 }
-.grid-item {
+.grid-itemFill {
+background-color: Red;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 15px;
+font-size: 20px;
+text-align: center;
+}
+.grid-itemEmpt {
 background-color: rgba(255, 255, 255, 0.8);
 border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
@@ -180,25 +187,26 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
 
 print('<form action="/cgi-bin/web.py" method="POST">')
 print('</h2>')
+
 print('<h3>')
 # update grid display
 print('<div class="grid-container">')
-print('<div class="grid-item"> </div>')
+print('<div class="grid-itemEmpt"> </div>')
 for i in range(8):
-  print('<div class="grid-item"> %s </div>' %str(i+1))
+  print('<div class="grid-itemEmpt"> %s </div>' %str(i+1))
 print('<div class="grid-item"> A </div>')
 counter = 0
 rowletter = 1
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
-    print('<div class="grid-item"> <input type="checkbox" name="option" value="%s" checked> </span> </div>' %elem)
+    print('<div class="grid-itemFill"> <input type="checkbox" name="option" value="%s" checked> </span> </div>' %elem)
   else:
-    print('<div class="grid-item"> <input type="checkbox" name="option" value="%s"> </div>' %elem)
+    print('<div class="grid-itemEmpt"> <input type="checkbox" name="option" value="%s"> </div>' %elem)
   counter += 1
   if counter >= 8:
     counter = 0
     if rowletter < 8:
-      print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[rowletter])
+      print('<div class="grid-itemEmpt"> %s </div>' %list(Rowdict.keys())[rowletter])
       rowletter += 1
 
 if Completed == True:
