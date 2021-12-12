@@ -83,30 +83,23 @@ border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
 text-align: center;
-}.grid-itemBlank {
+}
+.grid-itemBlank {
 background-color: DarkGray;
 border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
 text-align: center;
 }
-</style>
-
-</style>
-
-<style>
 .center {
  text-align: center
 }
-</style>
-
-<style>
 .centimg {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:800px;
-  height:400px;
+  width:600px;
+  height:300px;
 }
 </style>
 
