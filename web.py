@@ -108,8 +108,8 @@ text-align: center;
 body {
   background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
