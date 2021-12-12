@@ -205,6 +205,7 @@ print('</div>')
 # div 2 for grid display
 print('<div style="float:left; margin:10px; margin-left:200px;">')
 print('<h2 class="center"> My Ships <br> </h2>')
+print('<h3>')
 # update grid display
 print('<div class="grid-container">')
 print('<div class="grid-item"> </div>')
@@ -218,7 +219,6 @@ for elem in AllCoords:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
   else:
     print('<div class="grid-item"> </div>')
-  
   counter += 1
   if counter >= 8:
     counter = 0
@@ -226,5 +226,6 @@ for elem in AllCoords:
       print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[rowletter])
       rowletter += 1
 print('</div>')
+print('</h3>')
 
 print('</html>')
