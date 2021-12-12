@@ -219,6 +219,6 @@ if Completed == True:
   pass
 else:
   print('<input type="submit" name="submitted" value="Submit">')
-print('</h3>')
+  print('</h3>')
 print('</form>')
 print('</html>') #close html page
