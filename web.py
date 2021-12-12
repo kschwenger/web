@@ -221,9 +221,10 @@ for elem in AllCoords:
   
   counter += 1
   if counter >= 8:
-    print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[rowletter])
-    rowletter += 1
     counter = 0
+    if rowletter < 8:
+      print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[rowletter])
+      rowletter += 1
 print('</div>')
 
 print('</html>')
