@@ -203,7 +203,7 @@ else:
   print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</div>')
-""""
+"""
 
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 
