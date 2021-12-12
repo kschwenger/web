@@ -218,7 +218,7 @@ for elem in AllCoords:
     print('<div class="grid-item"> </div>')
   
   counter += 1
-  if counter > 8:
+  if counter >= 8:
     counter = 0
 print('</div>')
 
