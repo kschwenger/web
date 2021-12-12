@@ -114,9 +114,10 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
+
 # div 1 for checkbox form
-print('<div style="float:left; margin:10px; margin-top:100px; margin-left:475px;">')
-print('<h2 class="center">')
+#print('<div style="float:left; margin:10px; margin-top:100px; margin-left:475px;">')
+#print('<h2 class="center">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
@@ -189,10 +190,10 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
 
+"""
 print('</h2>')
 
 # checkbox form
-"""
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
   checking(elem)
@@ -202,12 +203,12 @@ else:
   print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</div>')
-"""
+""""
 
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 
-# div 2 for grid display
-print('<div style="float:left; margin:10px; margin-left:200px;">')
+# div  for grid display
+print('<div style="center">')
 print('<h2 class="center"> My Ships <br> </h2>')
 print('<h3>')
 # update grid display
