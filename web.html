@@ -22,85 +22,135 @@
   width:800px;
   height:400px;
 }
+.grid-container {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+aspect-ratio: 1;
+height: 450px;
+width: 450px;
+margin-left: auto;
+margin-right: auto;
+}
+.grid-itemFill {
+background-color: OrangeRed;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 15px;
+font-size: 20px;
+text-align: center;
+}
+.grid-itemEmpt {
+background-color: White;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 15px;
+font-size: 20px;
+text-align: center;
+}
+.grid-itemBlank {
+background-color: DarkGray;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 15px;
+font-size: 20px;
+text-align: center;
+}
 </style>
 
 <img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
 
 <br>
 <h2 class="center"> Place Battleship (4 coordinates) </h2>
+
 <form class="center" action="/cgi-bin/web.py" method="POST">
-  <input type="checkbox" name="option" value="A1">
-  <input type="checkbox" name="option" value="A2"> 
-  <input type="checkbox" name="option" value="A3">
-  <input type="checkbox" name="option" value="A4">
-  <input type="checkbox" name="option" value="A5">
-  <input type="checkbox" name="option" value="A6">
-  <input type="checkbox" name="option" value="A7">
-  <input type="checkbox" name="option" value="A8">
-  <br>
-  <input type="checkbox" name="option" value="B1">
-  <input type="checkbox" name="option" value="B2">
-  <input type="checkbox" name="option" value="B3">
-  <input type="checkbox" name="option" value="B4">
-  <input type="checkbox" name="option" value="B5">
-  <input type="checkbox" name="option" value="B6">
-  <input type="checkbox" name="option" value="B7">
-  <input type="checkbox" name="option" value="B8"> 
-  <br>
-  <input type="checkbox" name="option" value="C1">
-  <input type="checkbox" name="option" value="C2">
-  <input type="checkbox" name="option" value="C3">
-  <input type="checkbox" name="option" value="C4">
-  <input type="checkbox" name="option" value="C5">
-  <input type="checkbox" name="option" value="C6">
-  <input type="checkbox" name="option" value="C7">
-  <input type="checkbox" name="option" value="C8">
-  <br>
-  <input type="checkbox" name="option" value="D1">
-  <input type="checkbox" name="option" value="D2">
-  <input type="checkbox" name="option" value="D3">
-  <input type="checkbox" name="option" value="D4">
-  <input type="checkbox" name="option" value="D5">
-  <input type="checkbox" name="option" value="D6">
-  <input type="checkbox" name="option" value="D7">
-  <input type="checkbox" name="option" value="D8">
-  <br>
-  <input type="checkbox" name="option" value="E1">
-  <input type="checkbox" name="option" value="E2">
-  <input type="checkbox" name="option" value="E3">
-  <input type="checkbox" name="option" value="E4">
-  <input type="checkbox" name="option" value="E5">
-  <input type="checkbox" name="option" value="E6">
-  <input type="checkbox" name="option" value="E7">
-  <input type="checkbox" name="option" value="E8">
-  <br>
-  <input type="checkbox" name="option" value="F1">
-  <input type="checkbox" name="option" value="F2">
-  <input type="checkbox" name="option" value="F3">
-  <input type="checkbox" name="option" value="F4">
-  <input type="checkbox" name="option" value="F5">
-  <input type="checkbox" name="option" value="F6">
-  <input type="checkbox" name="option" value="F7">
-  <input type="checkbox" name="option" value="F8">
-  <br>
-  <input type="checkbox" name="option" value="G1">
-  <input type="checkbox" name="option" value="G2">
-  <input type="checkbox" name="option" value="G3">
-  <input type="checkbox" name="option" value="G4">
-  <input type="checkbox" name="option" value="G5">
-  <input type="checkbox" name="option" value="G6">
-  <input type="checkbox" name="option" value="G7">
-  <input type="checkbox" name="option" value="G8">
-  <br>
-  <input type="checkbox" name="option" value="H1">
-  <input type="checkbox" name="option" value="H2">
-  <input type="checkbox" name="option" value="H3">
-  <input type="checkbox" name="option" value="H4">
-  <input type="checkbox" name="option" value="H5">
-  <input type="checkbox" name="option" value="H6">
-  <input type="checkbox" name="option" value="H7">
-  <input type="checkbox" name="option" value="H8">
-  <br>
+  <div class="grid-container">
+  <div class="grid-itemBlank"> </div>
+  <div class="grid-itemBlank"> 1 </div>
+  <div class="grid-itemBlank"> 2 </div>
+  <div class="grid-itemBlank"> 3 </div>
+  <div class="grid-itemBlank"> 4 </div>
+  <div class="grid-itemBlank"> 5 </div>
+  <div class="grid-itemBlank"> 6 </div>
+  <div class="grid-itemBlank"> 7 </div>
+  <div class="grid-itemBlank"> 8 </div>
+  <div class="grid-itemBlank"> A </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="A8"> </div>
+  <div class="grid-itemBlank"> B </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="B8"> </div>
+  <div class="grid-itemBlank"> C </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="C8"> </div>
+  <div class="grid-itemBlank"> D </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="D8"> </div>
+  <div class="grid-itemBlank"> E </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="E8"> </div>  
+  <div class="grid-itemBlank"> F </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="F8"> </div>  
+  <div class="grid-itemBlank"> G </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="G8"> </div>
+  <div class="grid-itemBlank"> H </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H1"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H2"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H3"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H4"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H5"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H6"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H7"> </div>
+  <div class="grid-itemBlank"> <input type="checkbox" name="option" value="H8"> </div>
   <input type="submit" name="submitted" value="Submit">
 </form>
 </html>
