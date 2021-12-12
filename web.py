@@ -209,6 +209,8 @@ print('<h2 class="center"> My Ships <br> </h2>')
 print('<div class="grid-container">')
 for i in range(8):
   print('<div class="grid-item"> %s </div>' %str(i+1))
+for i in range(8):
+  print('<div class="grid-item"> </div>')
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
