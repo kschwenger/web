@@ -83,6 +83,12 @@ border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
 text-align: center;
+}.grid-itemBlank {
+background-color: White;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 15px;
+font-size: 20px;
+text-align: center;
 }
 </style>
 
@@ -191,10 +197,10 @@ print('</h2>')
 print('<h3>')
 # update grid display
 print('<div class="grid-container">')
-print('<div class="grid-itemEmpt"> </div>')
+print('<div class="grid-itemBlank"> </div>')
 for i in range(8):
-  print('<div class="grid-itemEmpt"> %s </div>' %str(i+1))
-print('<div class="grid-itemEmpt"> A </div>')
+  print('<div class="grid-itemBlank"> %s </div>' %str(i+1))
+print('<div class="grid-itemBlank"> A </div>')
 counter = 0
 rowletter = 1
 for elem in AllCoords:
@@ -206,7 +212,7 @@ for elem in AllCoords:
   if counter >= 8:
     counter = 0
     if rowletter < 8:
-      print('<div class="grid-itemEmpt"> %s </div>' %list(Rowdict.keys())[rowletter])
+      print('<div class="grid-itemBlank"> %s </div>' %list(Rowdict.keys())[rowletter])
       rowletter += 1
 
 if Completed == True:
