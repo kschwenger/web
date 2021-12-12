@@ -215,7 +215,7 @@ print('</div>')
 if Completed == True:
   pass
 else:
-  print('<input style="margin:auto;" type="submit" name="submitted" value="Submit">')
+  print('<input type="submit" name="submitted" value="Submit">')
   
 print('</form>')
 print('</h3>')
