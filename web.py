@@ -68,6 +68,7 @@ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 450px;
 width: 450px;
+margin: auto;
 }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
@@ -178,8 +179,8 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
 
-print('<form class="center" action="/cgi-bin/web.py" method="POST">')
-print('My Ships <br> </h2>')
+print('<form action="/cgi-bin/web.py" method="POST">')
+print('</h2>')
 print('<h3>')
 # update grid display
 print('<div class="grid-container">')
