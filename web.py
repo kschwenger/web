@@ -192,6 +192,7 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
 print('</h2>')
 
 # checkbox form
+"""
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 for elem in AllCoords:
   checking(elem)
@@ -201,6 +202,9 @@ else:
   print('<input class="center" type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</div>')
+"""
+
+print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 
 # div 2 for grid display
 print('<div style="float:left; margin:10px; margin-left:200px;">')
@@ -216,7 +220,7 @@ counter = 0
 rowletter = 1
 for elem in AllCoords:
   if Coordinates.count(elem) > 0:
-    print('<div class="grid-item"> <span class="dot"></span> </div>')
+    print('<div class="grid-item"> <input type="checkbox" name="option" value="%s" checked> </span> </div>' %elem)
   else:
     print('<div class="grid-item"> </div>')
   counter += 1
@@ -225,6 +229,13 @@ for elem in AllCoords:
     if rowletter < 8:
       print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[rowletter])
       rowletter += 1
+
+if Completed == True:
+  pass
+else:
+  print('<input class="center" type="submit" name="submitted" value="Submit">')
+print('</form>')
+
 print('</div>')
 print('</h3>')
 
