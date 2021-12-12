@@ -108,7 +108,8 @@ text-align: center;
 body {
   background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;  
+  background-size: cover;
 }
 </style>
 
@@ -120,8 +121,7 @@ Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a lis
 Submit = dataFromhtml.getvalue('submitted')
 
 print('<body>')
-print('<div style="margin-top: 100px;">')
-print('<h2 class="center">')
+print('<h2 style="text-align:center; margin-top:200px;>')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
 
@@ -224,6 +224,5 @@ else:
   print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</h3>')
-print('</div>')
 print('</body>')
 print('</html>') #close html page
