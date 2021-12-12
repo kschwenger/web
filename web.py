@@ -64,7 +64,7 @@ print("""
 .grid-container {
 display: grid;
 float: left;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 450px;
@@ -209,13 +209,17 @@ print('<h2 class="center"> My Ships <br> </h2>')
 print('<div class="grid-container">')
 for i in range(8):
   print('<div class="grid-item"> %s </div>' %str(i+1))
-for i in range(8):
-  print('<div class="grid-item"> </div>')
+counter = 0
 for elem in AllCoords:
+  print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[counter]
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
   else:
     print('<div class="grid-item"> </div>')
+  
+  counter += 1
+  if counter > 8:
+    counter = 0
 print('</div>')
 
 print('</html>')
