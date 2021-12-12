@@ -68,7 +68,8 @@ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 aspect-ratio: 1;
 height: 450px;
 width: 450px;
-margin: auto;
+margin-left: auto;
+margin-right: auto;
 }
 .grid-itemFill {
 background-color: Red;
