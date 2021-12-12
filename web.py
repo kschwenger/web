@@ -209,9 +209,9 @@ print('<h2 class="center"> My Ships <br> </h2>')
 print('<div class="grid-container">')
 for i in range(8):
   print('<div class="grid-item"> %s </div>' %str(i+1))
+print('<div class="grid-item"> A </div>')
 counter = 0
 for elem in AllCoords:
-  print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[counter])
   if Coordinates.count(elem) > 0:
     print('<div class="grid-item"> <span class="dot"></span> </div>')
   else:
@@ -219,6 +219,7 @@ for elem in AllCoords:
   
   counter += 1
   if counter >= 8:
+    print('<div class="grid-item"> %s </div>' %list(Rowdict.keys())[counter-1])
     counter = 0
 print('</div>')
 
