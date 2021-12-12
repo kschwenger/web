@@ -103,7 +103,6 @@ text-align: center;
   width:600px;
   height:300px;
 }
-
 </style>
 </head>
 <body>
@@ -188,7 +187,7 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []
   print('Invalid selection, Place Battleship (4 coordinates) <br>')
 
-print('<form action="/cgi-bin/web.py" method="POST">')
+print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 print('</h2>')
 
 print('<h3>')
