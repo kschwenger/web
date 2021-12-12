@@ -103,15 +103,11 @@ text-align: center;
   width:600px;
   height:300px;
 }
-body {
-  background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
+
 </style>
 </head>
 <body>
+<img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
 """)
 
 # get data from html form
