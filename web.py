@@ -96,6 +96,7 @@ text-align: center;
  text-align: center
 }
 .centimg {
+  background-color: DodgerBlue;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -104,14 +105,7 @@ text-align: center;
 }
 </style>
 
-<style>
-body {
-  background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
-</style>
+<img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
 
 """)
 
@@ -120,7 +114,6 @@ dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
 Submit = dataFromhtml.getvalue('submitted')
 
-print('<body>')
 print('<h2 style="text-align:center;">')
 
 if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes checked)
@@ -196,7 +189,6 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
 
 print('<form action="/cgi-bin/web.py" method="POST">')
 print('</h2>')
-print('</body>')
 
 print('<h3>')
 # update grid display
@@ -223,6 +215,7 @@ if Completed == True:
   pass
 else:
   print('<input style="margin:auto;" type="submit" name="submitted" value="Submit">')
+  
 print('</form>')
 print('</h3>')
 print('</html>') #close html page
