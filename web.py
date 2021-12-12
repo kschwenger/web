@@ -100,8 +100,7 @@ text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:600px;
-  height:300px;
+  width:1000px;
 }
 body {
   background-image: url('https://images.theconversation.com/files/295442/original/file-20191003-52796-1763ajl.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop');
@@ -111,7 +110,7 @@ body {
 }
 </style>
 </head>
-<img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
+<img src="https://i.ibb.co/CKMGM49/Battleship-Logo.png" alt="Battleship Logo" class="centimg">
 """)
 
 # get data from html form
