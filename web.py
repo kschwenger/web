@@ -78,13 +78,13 @@ font-size: 20px;
 text-align: center;
 }
 .grid-itemEmpt {
-background-color: rgba(255, 255, 255, 0.8);
+background-color: White;
 border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
 text-align: center;
 }.grid-itemBlank {
-background-color: White;
+background-color: DarkGray;
 border: 1px solid rgba(0, 0, 0, 0.8);
 padding: 15px;
 font-size: 20px;
