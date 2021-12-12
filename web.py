@@ -106,7 +106,7 @@ text-align: center;
 
 <style>
 body {
-  background-image: url('img_girl.jpg');
+  background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
