@@ -105,7 +105,6 @@ text-align: center;
 }
 </style>
 </head>
-<body>
 <img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/GADQJXEQY5SCTPUAMTQGAHKT4U.jpg" alt="Battleship Logo" class="centimg">
 """)
 
@@ -222,5 +221,4 @@ if Completed == True:
 else:
   print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
-print('</body>')
 print('</html>') #close html page
