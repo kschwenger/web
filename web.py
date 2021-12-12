@@ -196,6 +196,7 @@ else: # if Coordinates is not a list (0 or 1 total boxes checked)
 
 print('<form action="/cgi-bin/web.py" method="POST">')
 print('</h2>')
+print('</body>')
 
 print('<h3>')
 # update grid display
@@ -224,5 +225,4 @@ else:
   print('<input type="submit" name="submitted" value="Submit">')
 print('</form>')
 print('</h3>')
-print('</body>')
 print('</html>') #close html page
