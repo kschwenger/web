@@ -202,14 +202,16 @@ print('</div>')
 print('<br>')
 print('<br>')
 print('<br>')
+
 if Completed == True: # only include submit button if all ships have been placed
   pass
 else:
   print('<input type="submit" name="submitted" value="Submit">')
+
 print('</h3>')
 print('</form>')
 print('</body>')
-print('</html>') #close html page 
+print('</html>') # closing html things
 
 # Kevin Schwenger, Chris Jean-Rene, Kyle Shreve
 # ENME441 Course Project
