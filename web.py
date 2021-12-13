@@ -23,7 +23,7 @@ def IsItValid(ship):  # Returns true if all coordinates are adjacent in same row
         break
       else:
         pass
-    elif ship[0][1] == ship[coordinate+1][1]: # if coordinates have same number (column)
+    elif ship[0][1] == ship[coordinate+1][1] and ship[0][1] == ship[-1][1]: # if coordinates have same number (column)
       if abs(Rowdict[ship[coordinate][0]] - Rowdict[ship[coordinate+1][0]]) > 1: # if coordinate letters (rows) not adjacent
         Valid = False
         break
