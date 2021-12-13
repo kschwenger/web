@@ -183,22 +183,25 @@ print('<div class="grid-container">')
 print('<div class="grid-itemBlank"> </div>')
 for i in range(8):  # print column labels (numbers)
   print('<div class="grid-itemBlank"> %s </div>' %str(i+1))
-print('<div class="grid-itemBlank"> A </div>')
+print('<div class="grid-itemBlank"> A </div>')  # print first row label "A"
+counter = 0
 rowletter = 1
 for elem in AllCoords:
   if Coordinates.count(elem) > 0: # if the coordinate has been saved, mark it as checked
     print('<div class="grid-itemFill"> <input type="checkbox" name="option" value="%s" checked> </span> </div>' %elem)
   else:
     print('<div class="grid-itemEmpt"> <input type="checkbox" name="option" value="%s"> </div>' %elem)
-    
-  if rowletter < 8:
-    print('<div class="grid-itemBlank"> %s </div>' %list(Rowdict.keys())[rowletter])
-    rowletter += 1
+  counter += 1
+  if counter >= 8:  # start a new row
+    counter = 0
+    if rowletter < 8: # print the row labels (numbers)
+      print('<div class="grid-itemBlank"> %s </div>' %list(Rowdict.keys())[rowletter])
+      rowletter += 1
 print('</div>')
 print('<br>')
 print('<br>')
 print('<br>')
-if Completed == True:
+if Completed == True: # only include submit button if all ships have been placed
   pass
 else:
   print('<input type="submit" name="submitted" value="Submit">')
@@ -206,4 +209,8 @@ print('</h3>')
 print('</form>')
 print('</body>')
 print('</html>') #close html page 
-#12/12/2021 12:09AM
+
+# Kevin Schwenger, Chris Jean-Rene, Kyle Shreve
+# ENME441 Course Project
+# Professor DeVoe
+# Last Update: 12/12/2021 7:17PM
