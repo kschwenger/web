@@ -99,6 +99,7 @@ body {
 # get data from html form
 dataFromhtml = cgi.FieldStorage()
 Coordinates = dataFromhtml.getvalue('option') # save chosen coordinates as a list
+Submit = dataFromhtml.getvalue('submitted')
 
 print('<body>') # start body of html page
 print('<h2 style="text-align:center;">')
