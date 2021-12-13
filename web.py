@@ -207,7 +207,7 @@ print('<br>')
 if Completed == True: # only include submit button if all ships have been placed
   pass
 else:
-  print('<input type="submit" name="submitted" value="Submit">')
+  print('<input type="submit" name="submitted" value="Submit" style="height:60px; width:120px">')
 
 print('</h3>')
 print('</form>')
