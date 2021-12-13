@@ -174,8 +174,9 @@ if isinstance(Coordinates, list): # if Coordinates is a list (>1 total boxes che
 else: # if Coordinates is not a list (0 or 1 total boxes checked)
   Coordinates = []  # set coordinates as empty for blank grid
   print('Invalid selection, Place <span style="color:OrangeRed"> Battleship </span> (4 coordinates next to each other in a single row or column) <br>')
-
 print('</h2>')
+
+# start checkbox form, each checkbox goes into the grid container as a grid item
 print('<form class="center" action="/cgi-bin/web.py" method="POST">')
 print('<h3 class="center">')
 
