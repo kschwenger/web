@@ -17,7 +17,7 @@ Completed = False # True once all ships placed
 def IsItValid(ship):  # Returns true if all coordinates are adjacent in same row/column
   Valid = True
   for coordinate in range(len(ship)-1):
-    if ship[0][0] == ship[coordinate+1][0]: # if coordinates have same letter (row)
+    if ship[0][0] == ship[coordinate+1][0] and ship[0][0] == ship[-1][0]: # if coordinates have same letter (row)
       if abs(int(ship[coordinate][1]) - int(ship[coordinate+1][1])) > 1: # if coordinate numbers (columns) not adjacent
         Valid = False
         break
